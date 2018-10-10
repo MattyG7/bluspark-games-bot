@@ -1,2 +1,2 @@
 # bluspark-games-bot
-Discord Bot
+Discord Bot run on Heroku 24/7!
