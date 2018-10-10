@@ -589,7 +589,7 @@ bot.on("message", async message => {
         .setColor("#1fd1c8")
         .setTitle(`Bowling (no prize) 🎳`)
         .setDescription(`You picked up a bowling ball, threw it down the lane and...`);
-         message.channel.send(fbwlembed);
+        message.channel.send(fbwlembed);
         setTimeout(() => {
           let fbwllembed = new Discord.RichEmbed()
           .setColor("#1fd1c8")
@@ -602,7 +602,7 @@ bot.on("message", async message => {
         .setColor("#1fd1c8")
         .setTitle(`Bowling (no prize) 🎳`)
         .setDescription(`You picked up a bowling ball, threw it down the lane and...`);
-         message.channel.send(fbwlembed);
+        message.channel.send(fbwlembed);
         setTimeout(() => {
           let fbwllembed = new Discord.RichEmbed()
           .setColor("#1fd1c8")
@@ -615,7 +615,7 @@ bot.on("message", async message => {
         .setColor("#1fd1c8")
         .setTitle(`Bowling (no prize) 🎳`)
         .setDescription(`You picked up a bowling ball, threw it down the lane and...`);
-         message.channel.send(fbwlembed);
+        message.channel.send(fbwlembed);
         setTimeout(() => {
           let fbwllembed = new Discord.RichEmbed()
           .setColor("#1fd1c8")
@@ -628,7 +628,7 @@ bot.on("message", async message => {
         .setColor("#1fd1c8")
         .setTitle(`Bowling (no prize) 🎳`)
         .setDescription(`You picked up a bowling ball, threw it down the lane and...`);
-         message.channel.send(fbwlembed);
+        message.channel.send(fbwlembed);
         setTimeout(() => {
           let fbwllembed = new Discord.RichEmbed()
           .setColor("#1fd1c8")
@@ -641,7 +641,7 @@ bot.on("message", async message => {
         .setColor("#1fd1c8")
         .setTitle(`Bowling (no prize) 🎳`)
         .setDescription(`You picked up a bowling ball, threw it down the lane and...`);
-         message.channel.send(fbwlembed);
+        message.channel.send(fbwlembed);
         setTimeout(() => {
           let fbwllembed = new Discord.RichEmbed()
           .setColor("#1fd1c8")
@@ -666,7 +666,7 @@ bot.on("message", async message => {
         .setColor("#1fd1c8")
         .setTitle(`Bowling 🎳`)
         .setDescription(`You picked up a bowling ball, threw it down the lane and...`);
-         message.channel.send(fbwlembed);
+        message.channel.send(fbwlembed);
         setTimeout(() => {
           let fbwllembed = new Discord.RichEmbed()
           .setColor("#1fd1c8")
@@ -679,7 +679,7 @@ bot.on("message", async message => {
         .setColor("#1fd1c8")
         .setTitle(`Bowling 🎳`)
         .setDescription(`You picked up a bowling ball, threw it down the lane and...`);
-         message.channel.send(fbwlembed);
+        message.channel.send(fbwlembed);
         setTimeout(() => {
           let fbwllembed = new Discord.RichEmbed()
           .setColor("#1fd1c8")
@@ -692,7 +692,7 @@ bot.on("message", async message => {
         .setColor("#1fd1c8")
         .setTitle(`Bowling 🎳`)
         .setDescription(`You picked up a bowling ball, threw it down the lane and...`);
-         message.channel.send(fbwlembed);
+        message.channel.send(fbwlembed);
         setTimeout(() => {
           let fbwllembed = new Discord.RichEmbed()
           .setColor("#1fd1c8")
@@ -705,7 +705,7 @@ bot.on("message", async message => {
         .setColor("#1fd1c8")
         .setTitle(`Bowling 🎳`)
         .setDescription(`You picked up a bowling ball, threw it down the lane and...`);
-         message.channel.send(fbwlembed);
+        message.channel.send(fbwlembed);
         setTimeout(() => {
           let fbwllembed = new Discord.RichEmbed()
           .setColor("#1fd1c8")
@@ -752,7 +752,7 @@ bot.on("message", async message => {
         .setColor("#1fd1c8")
         .setTitle(`Penalty ⚽`)
         .setDescription(`You run up, kick the ball and...`);
-         message.channel.send(fpnltyembed);
+        message.channel.send(fpnltyembed);
         setTimeout(() => {
           let fpnltyyembed = new Discord.RichEmbed()
           .setColor("#1fd1c8")
@@ -766,7 +766,7 @@ bot.on("message", async message => {
         .setColor("#1fd1c8")
         .setTitle(`Penalty ⚽`)
         .setDescription(`You run up, kick the ball and...`);
-         message.channel.send(pnltyembed);
+        message.channel.send(pnltyembed);
         setTimeout(() => {
           let pnltyyembed = new Discord.RichEmbed()
           .setColor("#1fd1c8")
