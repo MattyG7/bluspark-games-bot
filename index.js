@@ -25,7 +25,7 @@ bot.on("message", async message => {
   if (message.author.bot) return;
   if (message.channel.type === "dm") return;
 
-  let prefix = botconfig.prefix;
+  let prefix = "~";
   let author = "MasterBluspark#0119";
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
