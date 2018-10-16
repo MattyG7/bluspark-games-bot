@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-const token = process.env.token;
 bot.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
@@ -63,4 +62,4 @@ bot.on("message", async message => {
   }
 
 });
-bot.login(token);
+bot.login(process.env.token);
