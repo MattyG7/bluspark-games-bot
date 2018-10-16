@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args, messageArray) => {
+module.exports.run = async (bot, message, args) => {
   let coins = 100;
   let dcnum = `**dicenumber**`;
   let mnyamnt = `**moneyamount**`;
-  if (messageArray.length < 2) {
+  if (!args[0]) {
     let replies = ["**1**", "**2**", "**3**", "**4**", "**5**", "**6**"];
     let result = Math.floor((Math.random() * replies.length));
 
@@ -14,10 +14,18 @@ module.exports.run = async (bot, message, args, messageArray) => {
     .setDescription(`You rolled a ${replies[result]}!`);
     return message.channel.send(frllembed);
   }
-  if(messageArray.length != 3) return message.channel.send(`Please use the correct format: ~roll ${dcnum} ${mnyamnt}.`);
+  if(args[2]) return message.channel.send(`Please use the correct format: ~roll ${dcnum} ${mnyamnt}.`);
+  if(args[0] && !args[1]) return message.channel.send(`Please use the correct format: ~roll ${dcnum} ${mnyamnt}.`);
   if(isNaN(args[0]) && isNaN(args[1])) return message.channel.send(`Please use numbers! The correct format is: ~roll ${dcnum} ${mnyamnt}.`);
   if(args[0] != 1 && args[0] != 2 && args[0] != 3 && args[0] != 4 && args[0] != 5 && args[0] != 6) return message.channel.send(`${message.author.username}, please use a number from 1 to 6.`);
   if(isNaN(args[1])) return message.channel.send(`${message.author.username}, please use a money amount.`);
+  if (args[1] > coins) {
+    let ntenghembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setDescription(`You don't have enough SparkCoins!`)
+    .setFooter(`Money: ${coins} SparkCoins`);
+     message.channel.send(ntenghembed);
+  }
   let replies = ["1", "2", "3", "4", "5", "6"];
   let result = Math.floor((Math.random() * replies.length));
 
