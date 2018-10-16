@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Multiply", "`x`")
     .addField("Divide", "`/`")
     .addField("Power of", "`^`")
-    .setFooter("Alternate commands: ~maths ~calculator");
+    .setFooter("Alternate commands: ~calc ~calculator");
     return message.channel.send(mthembed);
   }
   if (args[1] === "+") {
@@ -22,7 +22,8 @@ module.exports.run = async (bot, message, args) => {
     let num1 = args[0];
     let num2 = args[2];
     let sum = `${args[0]} + ${args[2]}`;
-    let ans = args[0] + args[2];
+    let ans = 0;
+    ans = args[0] + args[2];
 
     let mthembed = new Discord.RichEmbed()
     .setColor("#1fd1c8")
