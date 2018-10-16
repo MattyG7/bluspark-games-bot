@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setDescription(`You don't have enough SparkCoins!`)
     .setFooter(`Money: ${coins} SparkCoins`);
-     message.channel.send(ntenghembed);
+    return message.channel.send(ntenghembed);
   }
   let replies = ["1", "2", "3", "4", "5", "6"];
   let result = Math.floor((Math.random() * replies.length));
