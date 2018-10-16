@@ -82,7 +82,7 @@ module.exports.run = async (bot, message, args) => {
       .setColor("#1fd1c8")
       .setDescription(`You don't have enough SparkCoins!`)
       .setFooter(`Money: ${coins} SparkCoins`);
-       message.channel.send(ntenghembed);
+      return message.channel.send(ntenghembed);
     }
     let replies = ["**0 pins**", "**1 pin**", "**2 pins**", "**3 pins**", "**4 pins**", "**5 pins**", "**6 pins**", "**7 pins**", "**8 pins**", "**9 pins**", "**10 pins**"];
     let result = Math.floor((Math.random() * replies.length));
@@ -92,6 +92,7 @@ module.exports.run = async (bot, message, args) => {
     let win = `*You win ${wnngs} SparkCoins!*`;
     let nthng = `*You didn't win any SparkCoins. Try again later.*`;
     let lose = `*You lose ${wnngs} SparkCoins. Try again later.*`;
+    let losez = `*You lose ${args[0]} SparkCoins. Try again later.*`;
     if (result === 0) {
       let fbwlembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
@@ -101,7 +102,7 @@ module.exports.run = async (bot, message, args) => {
       setTimeout(() => {
         let fbwllembed = new Discord.RichEmbed()
         .setColor("#1fd1c8")
-        .setDescription(`Knocked down ${replies[result]}. ${lose}`);
+        .setDescription(`Knocked down ${replies[result]}. ${losez}`);
         return message.channel.send(fbwllembed);
       }, 4000);
     }
