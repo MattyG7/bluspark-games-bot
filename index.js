@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
+bot.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
   if (err) console.log(err);
@@ -16,7 +17,6 @@ fs.readdir("./commands/", (err, files) => {
     bot.commands.set(props.help.name, props);
   });
 });
-
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
