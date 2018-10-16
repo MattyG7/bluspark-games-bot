@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args, messageArray) => {
+module.exports.run = async (bot, message, args) => {
   let coins = 100;
   let mnyamnt = `**moneyamount**`;
   let allpns = "*Strike*";
-  if (messageArray.length < 2) {
+  if (!args[0]) {
     let replies = ["**0 pins**", "**1 pin**", "**2 pins**", "**3 pins**", "**4 pins**", "**5 pins**", "**6 pins**", "**7 pins**", "**8 pins**", "**9 pins**", "**10 pins**"];
     let result = Math.floor((Math.random() * replies.length));
 
@@ -74,9 +74,16 @@ module.exports.run = async (bot, message, args, messageArray) => {
       }, 4000);
     }
   }
-  if(messageArray.length > 2) return message.channel.send(`${message.author.username}, please use the correct format: ~bowl ${mnyamnt}.`);
-  if(messageArray.length === 2) {
+  if(args[1]) return message.channel.send(`${message.author.username}, please use the correct format: ~bowl ${mnyamnt}.`);
+  if(args[0]) {
     if(isNaN(args[0])) return message.channel.send(`${message.author.username}, please use a money amount.`);
+    if (args[0] > coins) {
+      let ntenghembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setDescription(`You don't have enough SparkCoins!`)
+      .setFooter(`Money: ${coins} SparkCoins`);
+       message.channel.send(ntenghembed);
+    }
     let replies = ["**0 pins**", "**1 pin**", "**2 pins**", "**3 pins**", "**4 pins**", "**5 pins**", "**6 pins**", "**7 pins**", "**8 pins**", "**9 pins**", "**10 pins**"];
     let result = Math.floor((Math.random() * replies.length));
 
