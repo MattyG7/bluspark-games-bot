@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args, messageArray) => {
+module.exports.run = async (bot, message, args) => {
   let coins = 100;
   let gl = `**GOAL!**`;
   let mnyamnt = `**moneyamount**`;
-  if (messageArray.length < 2) {
+  if (!args[0]) {
     let replies = [`${gl} You scored!`, "Missed! Better luck next time.", "The keeper saved it! Unlucky.", "Skied it! 😐"];
     let result = Math.floor((Math.random() * replies.length));
 
@@ -20,9 +20,16 @@ module.exports.run = async (bot, message, args, messageArray) => {
       return message.channel.send(fpnltyyembed);
     }, 3000);
   }
-  if(messageArray.length > 2) return message.channel.send(`${message.author.username}, please use the correct format: ~penalty ${mnyamnt}.`);
-  if(messageArray.length === 2) {
+  if(args[1]) return message.channel.send(`${message.author.username}, please use the correct format: ~penalty ${mnyamnt}.`);
+  if(args[0]) {
     if(isNaN(args[0])) return message.channel.send(`${message.author.username}, please use numbers! The correct format is: ~penalty ${mnyamnt}.`);
+    if (args[0] > coins) {
+      let ntenghembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setDescription(`You don't have enough SparkCoins!`)
+      .setFooter(`Money: ${coins} SparkCoins`);
+       message.channel.send(ntenghembed);
+    }
     let replies = [`${gl} You scored!`, "Missed! Better luck next time.", "The keeper saved it! Unlucky.", "Skied it! 😐"];
     let result = Math.floor((Math.random() * replies.length));
 
