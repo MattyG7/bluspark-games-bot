@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args, messageArray) => {
+module.exports.run = async (bot, message, args) => {
   let nmbr = "**number**";
   let symbls = "`+ - x / ^`";
   if (!args[0] || args[0] === "help") {
@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args, messageArray) => {
   }
   if (args[1] === "+") {
     if (isNaN(args[0]) || isNaN(args[2])) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
-    if(messageArray.length != 3) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
+    if(args[3]) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
     let num1 = args[0];
     let num2 = args[2];
     let sum = `${args[0]} + ${args[2]}`;
@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args, messageArray) => {
   }
   if (args[1] === "-") {
     if (isNaN(args[0]) || isNaN(args[2])) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
-    if(messageArray.length != 3) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
+    if(args[3]) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
     let num1 = args[0];
     let num2 = args[2];
     let sum = `${args[0]} - ${args[2]}`;
@@ -44,7 +44,7 @@ module.exports.run = async (bot, message, args, messageArray) => {
   }
   if (args[1] === "x" || args[1] === "*") {
     if (isNaN(args[0]) || isNaN(args[2])) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
-    if(messageArray.length != 3) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
+    if(args[3]) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
     let num1 = args[0];
     let num2 = args[2];
     let sum = `${args[0]} x ${args[2]}`;
@@ -57,7 +57,7 @@ module.exports.run = async (bot, message, args, messageArray) => {
   }
   if (args[1] === "/") {
     if (isNaN(args[0]) || isNaN(args[2])) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
-    if(messageArray.length != 3) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
+    if(args[3]) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
     let num1 = args[0];
     let num2 = args[2];
     let sum = `${args[0]} / ${args[2]}`;
@@ -70,7 +70,7 @@ module.exports.run = async (bot, message, args, messageArray) => {
   }
   if (args[1] === "^") {
     if (isNaN(args[0]) || isNaN(args[2])) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
-    if(messageArray.length != 3) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
+    if(args[3]) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
     if(args[2] === "0") {
       let sum = `${args[0]} to the power of ${args[2]}`;
       let mthembed = new Discord.RichEmbed()
@@ -104,8 +104,8 @@ module.exports.run = async (bot, message, args, messageArray) => {
   }
   let nothelp = "***~calc***";
   let nothelpp = "***~calc help***";
-  if (messageArray.length === 1 && args[0] != "help") return message.channel.send(`Did you mean ${nothelp} or ${nothelpp}?`);
-  if (messageArray.length === 3 && args[1] != "+" && args[1] != "-" && args[1] != "x" && args[1] != "*" && args[1] != "/" && args[1] != "^") return message.channel.send(`Please use one of these: ${symbls}`);
+  if (args[0] != "help" && !args[1]) return message.channel.send(`Did you mean ${nothelp} or ${nothelpp}?`);
+  if (args[1] != "+" && args[1] != "-" && args[1] != "x" && args[1] != "*" && args[1] != "/" && args[1] != "^") return message.channel.send(`Please use one of these: ${symbls}`);
 }
 
 module.exports.help = {
