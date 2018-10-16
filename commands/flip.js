@@ -18,12 +18,12 @@ module.exports.run = async (bot, message, args) => {
   if(args[0] && !args[1]) return message.channel.send(`Please use the correct format: ~flip ${cnsd} ${mnyamnt}.`);
   if(args[0] != "heads" && args[0] != "tails") return message.channel.send(`Please use the correct format: ~flip ${cnsd} ${mnyamnt}.`);
   if(isNaN(args[1])) return message.channel.send(`Please use a money amount.`);
-  if (args[0] > coins) {
+  if (args[1] > coins) {
     let ntenghembed = new Discord.RichEmbed()
     .setColor("#1fd1c8")
     .setDescription(`You don't have enough SparkCoins!`)
     .setFooter(`Money: ${coins} SparkCoins`);
-     message.channel.send(ntenghembed);
+    return message.channel.send(ntenghembed);
   }
   let replies = ["heads", "tails"];
   let result = Math.floor((Math.random() * replies.length));
