@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
     let num2 = args[2];
     let sum = `${args[0]} + ${args[2]}`;
     let ans = 0;
-    ans = args[0] + args[2];
+    ans = args[0] +args[2];
 
     let mthembed = new Discord.RichEmbed()
     .setColor("#1fd1c8")
