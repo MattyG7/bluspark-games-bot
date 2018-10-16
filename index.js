@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const token = process.env.token;
-const token = require("fs");
 bot.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
