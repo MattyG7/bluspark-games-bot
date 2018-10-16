@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args, messageArray) => {
+module.exports.run = async (bot, message, args) => {
   let coins = 100;
   let cnsd = `**coinside**`;
   let mnyamnt = `**moneyamount**`;
-  if (messageArray.length < 2) {
+  if (!args[0]) {
     let replies = ["**Heads**", "**Tails**"];
     let result = Math.floor((Math.random() * replies.length));
 
@@ -14,9 +14,17 @@ module.exports.run = async (bot, message, args, messageArray) => {
     .setDescription(`The coin landed on ${replies[result]}!`);
     return message.channel.send(fflpembed);
   }
-  if(messageArray.length != 3) return message.channel.send(`Please use the correct format: ~flip ${cnsd} ${mnyamnt}.`);
+  if(args[2]) return message.channel.send(`Please use the correct format: ~flip ${cnsd} ${mnyamnt}.`);
+  if(args[0] && !args[1]) return message.channel.send(`Please use the correct format: ~flip ${cnsd} ${mnyamnt}.`);
   if(args[0] != "heads" && args[0] != "tails") return message.channel.send(`Please use the correct format: ~flip ${cnsd} ${mnyamnt}.`);
   if(isNaN(args[1])) return message.channel.send(`Please use a money amount.`);
+  if (args[0] > coins) {
+    let ntenghembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setDescription(`You don't have enough SparkCoins!`)
+    .setFooter(`Money: ${coins} SparkCoins`);
+     message.channel.send(ntenghembed);
+  }
   let replies = ["heads", "tails"];
   let result = Math.floor((Math.random() * replies.length));
 
