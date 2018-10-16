@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Randomising", "`sing, colour, emoji, anime, fortune`")
   .addField("Education", "`calc`")
   .addField("Admin Only", "`clear, steal, spam`")
-  .addField("------------------", "------------------")
+  .addBlankField(true)
   .addField("***For examples***", "*type ~helpx*");
   return message.channel.send(helpembed);
 }
