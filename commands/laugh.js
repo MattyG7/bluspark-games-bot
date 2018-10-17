@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
 
     if(result === 0) {
       let lghicon = message.author.displayAvatarURL;
-      let lghicon = new Discord.RichEmbed()
+      let lghembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       //.setAuthor("Laugh 😂", tngicon)
       .setAuthor(`***${message.author.username} finds that funny!`, lghicon)
@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
     }
     if(result === 1) {
       let lghicon = message.author.displayAvatarURL;
-      let lghicon = new Discord.RichEmbed()
+      let lghembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       //.setAuthor("Laugh 😂", tngicon)
       .setAuthor(`***${message.author.username} finds that funny!`, lghicon)
