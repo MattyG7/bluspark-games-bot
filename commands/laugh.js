@@ -1,10 +1,6 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-  let rUser = message.mentions.members.first();
-  if(args[0] && !rUser) return message.channel.send(`User not found! 😕`);
-  if(rUser.id === message.author.id) return message.channel.send(`***${message.author.username} is laughing at themself. Everyone, back away slowly...***`);
-
   if (!args[0]) {
     let replies = ["0", "1"];
     let result = Math.floor((Math.random() * replies.length));
@@ -15,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
       .setColor("#1fd1c8")
       //.setAuthor("Laugh 😂", tngicon)
       .setAuthor(`***${message.author.username} finds that funny!`, lghicon)
-      .setImage (`https://media1.tenor.com/images/f7d0b534e95c24a53b9767b480e76df3/tenor.gif?itemid=11203476`);
+      .setImage (`https://tenor.com/view/loli-laugh-haha-anime-funny-gif-11203476`);
       return message.channel.send(lghembed);
     }
     if(result === 1) {
@@ -28,6 +24,9 @@ module.exports.run = async (bot, message, args) => {
       return message.channel.send(lghembed);
     }
   }
+  let rUser = message.mentions.members.first();
+  if(args[0] && !rUser) return message.channel.send(`User not found! 😕`);
+  if(rUser.id === message.author.id) return message.channel.send(`***${message.author.username} is laughing at themself. Everyone, back away slowly...***`);
 
   let lghicon = message.author.displayAvatarURL;
   let lghembed = new Discord.RichEmbed()
