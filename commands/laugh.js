@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
   let rUser = message.mentions.members.first();
-  if(!rUser) return message.channel.send(`User not found! 😕`);
+  if(args[0] && !rUser) return message.channel.send(`User not found! 😕`);
   if(rUser.id === message.author.id) return message.channel.send(`***${message.author.username} is laughing at themself. Everyone, back away slowly...***`);
 
   if (!args[0]) {
