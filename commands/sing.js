@@ -58,7 +58,7 @@ module.exports.run = async (bot, message, args) => {
     let sngembed = new Discord.RichEmbed()
     .setColor("#1fd1c8")
     .setTitle(`🎵`)
-    .setDescription(replies[result]);
+    .setDescription(replies[result])
     .setFooter("- Clannad After Story");
     return message.channel.send(sngembed);
   }
@@ -66,7 +66,7 @@ module.exports.run = async (bot, message, args) => {
     let sngembed = new Discord.RichEmbed()
     .setColor("#1fd1c8")
     .setTitle(`🎵`)
-    .setDescription(replies[result]);
+    .setDescription(replies[result])
     .setFooter("- Your Name");
     return message.channel.send(sngembed);
   }
