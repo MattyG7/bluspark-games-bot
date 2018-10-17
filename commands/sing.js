@@ -46,7 +46,7 @@ module.exports.run = async (bot, message, args) => {
     .setDescription(replies[result]);
     return message.channel.send(sngembed);
   }
-  if (result === 32 || result === 33){
+  if (result === 31 || result === 32){
     let sngembed = new Discord.RichEmbed()
     .setColor("#1fd1c8")
     .setTitle(`🎵`)
@@ -54,7 +54,7 @@ module.exports.run = async (bot, message, args) => {
     .setFooter("- Angel Beats");
     return message.channel.send(sngembed);
   }
-  if (result === 34){
+  if (result === 33){
     let sngembed = new Discord.RichEmbed()
     .setColor("#1fd1c8")
     .setTitle(`🎵`)
@@ -62,7 +62,7 @@ module.exports.run = async (bot, message, args) => {
     .setFooter("- Clannad After Story");
     return message.channel.send(sngembed);
   }
-  if (result === 35){
+  if (result === 34){
     let sngembed = new Discord.RichEmbed()
     .setColor("#1fd1c8")
     .setTitle(`🎵`)
