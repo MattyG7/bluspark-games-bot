@@ -30,14 +30,44 @@ module.exports.run = async (bot, message, args) => {
     "**Chasing Cars**\n\nIf I lay here\nIf I just lay here\nWould you lay with me and just forget the world?",
     "**Huh?**\n\nI've lost my voice! Try again.",
     "**When You Say Nothing At All**\n\nThe smile on your face let's me know that you need me\nThere's a truth in your eyes saying you'll never leave me\nThe touch of your hand says you'll catch me if wherever I fall\nYou say it best when you say nothing at all",
-    "**A Little Respect**\n\nI try to discover\nA little something to make me sweeter\nOh baby refrain from breaking my heart\nI'm so in love with you\nI'll be forever blue\nThat you gimme no reason\nWhy you make me work so hard\nThat you gimme no\nThat you gimme no\nThat you gimme no\nThat you gimme no\nSoul, I hear you calling\nOh baby please give a little respect to me"];
+    "**A Little Respect**\n\nI try to discover\nA little something to make me sweeter\nOh baby refrain from breaking my heart\nI'm so in love with you\nI'll be forever blue\nThat you gimme no reason\nWhy you make me work so hard\nThat you gimme no\nThat you gimme no\nThat you gimme no\nThat you gimme no\nSoul, I hear you calling\nOh baby please give a little respect to me",
+    "**Still I Fly**\n\nThere's a time in your life\nWhen the world is on your side\nYou might not feel it\nYou might not see it\nBut it surrounds you like a light\nMakes you stronger for the fight\nNever letting go\nGotta learn to grow\nWatch me as I touch the sky\nStill I fly\nNow I know it's what I gotta do\nFind a dream that's new\nGive it all I got this time\nStill I fly\nStill I fly",
+    "**May I**\n\nThere you stand, opened heart, opened doors\nFull of life with a world that's wanting more\nBut I can see when the lights start to fade\nThe day is done and your smile has gone away\nLet me raise you up\nLet me be your love\nMay I hold you as you fall to sleep\nWhen the world is closing in\nAnd you can't breathe\nMay I love you, may I be your shield\nWhen no one can be found\nMay I lay you down",
+    "**My Most Precious Treasure**\n\nI'll go anywhere, I promise\nWith these things that you have taught me\nIn the tears so brightly shining\nI'll save happiness and our dreams\nEven if we're seperated\nI will bear the pain and carry on\nRise again to see the morning\nLive for you forevermore",
+    "**Brave Song**\n\nI've always been walking along this lonely path\nAnd when I turned around, everyone was far behind me\nNevertheless I keep on walking and walking\nTo show what memory of strength was\nNothing in this world scares me anymore\nBut that's a lie I keep whispering\nEveryone will be alone someday, believe me\nAnd they will live on memories which can be so sad but\nThey've made me feel love and alive feeling when I'm so lonely\nI will fight for my dear full of happiness\nAnd I will laugh, so shall them, cry no more tears",
+    "**Palm Of A Tiny Hand**\n\nFar away, far away\nI hear the wind gently caress the fields\nI walked along this empty road\nSearching for pieces of our fond memories\nEverything sad, can we forget?\nAll the moments that have led us here\nI still remember them\nAnd I always will\nIn this tiny hand of yours\nI know there is the strength\nThat will someday surely surpass our own\nAfter all the tears I've shed\nBeneath the ripe grapes\nI got up to carry on\nEven if my hand is small and we are far apart\nI reach out for you and we will walk this road\nAll the precious memories will stay in our hearts\nIf one day you choose to go",
+    "**Zenzenzense**\n\nAt last, hello, you've opened your eyes\nBut, why won't you even look me in the eyes, what's wrong with you?\nYou angrily tell me that I’m late\nWell, I'm sorry, but I did my best and running at my fastest pace\nMy heart overtook my body as it flew to find you in this place\n\nSeeing your hair flowing and your bright eyes glowing aches my very core\nWish I could breathe in the same dimension, I don't want to let it go\nNow that I am finally faced with the voice I've known for so long\nI don't know what the words should be the very first I say to you\nBack in the Zenzenzense 'til this day\nBeen looking everywhere for you\nI followed the sound of your innocent laughter\nAnd it guided me in the right way\nEven if every piece of you disappeared\nAnd if it scattered everywhere\nNo, I won't waver, I'll start back at one\nLook for you all over again\nOr maybe instead I'll take the whole universe\nRight back to zero again"];
 
   let result = Math.floor((Math.random() * replies.length));
   if (result === 26){
     let sngembed = new Discord.RichEmbed()
     .setColor("#1fd1c8")
     .setTitle(`❗`)
+    .setDescription(replies[result]);
+    return message.channel.send(sngembed);
+  }
+  if (result === 32 || result === 33){
+    let sngembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setTitle(`🎵`)
     .setDescription(replies[result])
+    .setFooter("- Angel Beats");
+    return message.channel.send(sngembed);
+  }
+  if (result === 34){
+    let sngembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setTitle(`🎵`)
+    .setDescription(replies[result]);
+    .setFooter("- Clannad After Story");
+    return message.channel.send(sngembed);
+  }
+  if (result === 35){
+    let sngembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setTitle(`🎵`)
+    .setDescription(replies[result]);
+    .setFooter("- Your Name");
     return message.channel.send(sngembed);
   }
 
