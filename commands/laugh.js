@@ -9,7 +9,6 @@ module.exports.run = async (bot, message, args) => {
       let lghicon = message.author.displayAvatarURL;
       let lghembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
-      //.setAuthor("Laugh 😂", tngicon)
       .setAuthor(`${message.author.username} finds that very funny!`, lghicon)
       .setImage (`https://media1.tenor.com/images/f7d0b534e95c24a53b9767b480e76df3/tenor.gif?itemid=11203476`);
       return message.channel.send(lghembed);
@@ -18,7 +17,6 @@ module.exports.run = async (bot, message, args) => {
       let lghicon = message.author.displayAvatarURL;
       let lghembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
-      //.setAuthor("Laugh 😂", tngicon)
       .setAuthor(`${message.author.username} finds that quite funny!`, lghicon)
       .setImage (`https://media1.tenor.com/images/2dcfc6694bb1a931c60bb67a6323e40d/tenor.gif?itemid=10067925`);
       return message.channel.send(lghembed);
