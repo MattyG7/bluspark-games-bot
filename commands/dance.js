@@ -9,7 +9,6 @@ module.exports.run = async (bot, message, args) => {
       let dncicon = message.author.displayAvatarURL;
       let dncembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
-      //.setAuthor("Laugh 😂", tngicon)
       .setAuthor(`${message.author.username} is dancing!`, dncicon)
       .setImage (`https://media1.tenor.com/images/e87bc763c55a4a39272926007126961e/tenor.gif?itemid=10596689`);
       return message.channel.send(dncembed);
@@ -18,7 +17,6 @@ module.exports.run = async (bot, message, args) => {
       let dncicon = message.author.displayAvatarURL;
       let dncembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
-      //.setAuthor("Laugh 😂", tngicon)
       .setAuthor(`${message.author.username} is dancing!`, dncicon)
       .setImage (`https://media.giphy.com/media/11lxCeKo6cHkJy/giphy.gif`);
       return message.channel.send(dncembed);
@@ -27,7 +25,6 @@ module.exports.run = async (bot, message, args) => {
       let dncicon = message.author.displayAvatarURL;
       let dncembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
-      //.setAuthor("Laugh 😂", tngicon)
       .setAuthor(`${message.author.username} is dancing...with guns?!`, dncicon)
       .setImage (`https://media.giphy.com/media/YvFgC6XIFwtrO/giphy.gif`);
       return message.channel.send(dncembed);
@@ -36,7 +33,6 @@ module.exports.run = async (bot, message, args) => {
       let dncicon = message.author.displayAvatarURL;
       let dncembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
-      //.setAuthor("Laugh 😂", tngicon)
       .setAuthor(`${message.author.username} is dancing!`, dncicon)
       .setImage (`https://media.giphy.com/media/aRjlzL31lrWDe/giphy.gif`);
       return message.channel.send(dncembed);
@@ -45,7 +41,6 @@ module.exports.run = async (bot, message, args) => {
       let dncicon = message.author.displayAvatarURL;
       let dncembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
-      //.setAuthor("Laugh 😂", tngicon)
       .setAuthor(`${message.author.username} is quite a cute dancer!`, dncicon)
       .setImage (`https://media.giphy.com/media/vSvRjXnAVRNHG/giphy.gif`);
       return message.channel.send(dncembed);
@@ -54,7 +49,6 @@ module.exports.run = async (bot, message, args) => {
       let dncicon = message.author.displayAvatarURL;
       let dncembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
-      //.setAuthor("Laugh 😂", tngicon)
       .setAuthor(`${message.author.username} is dancing!`, dncicon)
       .setImage (`https://media.giphy.com/media/1jgLDGD1Bn27e/giphy.gif`);
       return message.channel.send(dncembed);
@@ -63,7 +57,6 @@ module.exports.run = async (bot, message, args) => {
       let dncicon = message.author.displayAvatarURL;
       let dncembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
-      //.setAuthor("Laugh 😂", tngicon)
       .setAuthor(`${message.author.username} is dancing!`, dncicon)
       .setImage (`https://media1.tenor.com/images/766599022416cc0b7b7b1bd2040eb2db/tenor.gif?itemid=12039886`);
       return message.channel.send(dncembed);
