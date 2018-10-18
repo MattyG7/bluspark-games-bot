@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
   .setColor("#1fd1c8")
   .setAuthor("Brush Hair 💆", brshicon)
   .setDescription(`***${message.author.username} is brushing ${rUser.user.username}'s hair.***\nAww, how nice. 😊`)
-  .setImage (`https://steamusercontent-a.akamaihd.net/ugc/2436887475161476368/3F4A58ED2A714800FADFF57C7CD5274628A4648A/`);
+  .setImage (`https://thumbs.gfycat.com/ForkedLividFrillneckedlizard-size_restricted.gif`);
   return message.channel.send(brshembed);
 }
 
