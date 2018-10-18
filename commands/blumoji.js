@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   //let result = Math.floor((Math.random() * replies.length));
 
   if(args[0] === "happy") {
-    return message.channel.send(`<:happy:502494527425347605>`);
+    return message.channel.send(`<:bluhappy:502494527425347605>`);
   }
   if(args[0] === "sad") {
     return message.channel.send(`...`);
