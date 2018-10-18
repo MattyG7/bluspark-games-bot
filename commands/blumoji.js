@@ -5,10 +5,10 @@ module.exports.run = async (bot, message, args) => {
   let result = Math.floor((Math.random() * replies.length));
 
   if(result === 0) {
-    return message.channel.send(":spark:");
+    return message.channel.send(`<:spark:501492938212245524>`);
   }
   if(result === 1) {
-    return message.channel.send("<:masterball:>");
+    return message.channel.send(`<:masterball:501490551468720138>`);
   }
 }
 
