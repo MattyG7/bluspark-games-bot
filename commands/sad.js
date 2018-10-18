@@ -5,8 +5,7 @@ module.exports.run = async (bot, message, args) => {
     let sdicon = message.author.displayAvatarURL;
     let sdembed = new Discord.RichEmbed()
     .setColor("#1fd1c8")
-    .setAuthor("Sad 😔", sdicon)
-    .setDescription(`***${message.author.username} is very sad.***\nSomeone, cheer them up! 😔`)
+    .setAuthor(`${message.author.username} is very sad.`, sdicon)
     .setImage (`https://media.giphy.com/media/a9xhxAxaqOfQs/giphy.gif`);
     return message.channel.send(sdembed);
   }
