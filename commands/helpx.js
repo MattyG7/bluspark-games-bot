@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Actions", "~hug @*INSERTNAMEHERE*")
   .addField("Emotions & Solo Actions", "`~cute`")
   .addField("Games", "~flip heads 20 | ~roll 6 20 (please note that the order is Dice Number and then Money Amount) | ~bowl 20 | ~penalty 20 | ~rps | ~memory, ~memory e | ~deal | ~dontgetbit")
-  .addField("Fun", "~8ball is grass green | ~flip | ~roll | ~bowl | ~penalty | ~say words go here")
+  .addField("Fun", "~8ball is grass green | ~flip | ~roll | ~bowl | ~penalty | ~say words go here | ~blumoji happy")
   .addField("Randomising", "~sing")
   .addField("Education", "~calc, ~calc help, ~calc *NUMBER* + *NUMBER*")
   .addField("Admin Only", "~clear 2 | ~steal @*INSERTNAMEHERE* 100 | ~spam 2");
