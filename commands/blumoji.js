@@ -1,14 +1,17 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-  let replies = ["0", "1"];
-  let result = Math.floor((Math.random() * replies.length));
+  //let replies = ["0", "1", "2", "3", "4"];
+  //let result = Math.floor((Math.random() * replies.length));
 
-  if(result === 0) {
-    return message.channel.send(`<:spark:501492938212245524>`);
+  if(args[0] === "happy") {
+    return message.channel.send(`<:happy:502494527425347605>`);
   }
-  if(result === 1) {
-    return message.channel.send(`<:masterball:501490551468720138>`);
+  if(args[0] === "sad") {
+    return message.channel.send(`...`);
+  }
+  if(args[0] === "sleepy") {
+    return message.channel.send(`...`);
   }
 }
 
