@@ -68,7 +68,7 @@ module.exports.run = async (bot, message, args) => {
   if(args[0] && !rUser) return message.channel.send(`User not found! 😕`);
   if(rUser.id === message.author.id) return message.channel.send(`***${message.author.username} is laughing at themself. Everyone, back away slowly...***`);
 
-  let replies = ["0", "1", "2", "3", "4", "5", "6"];
+  let replies = ["0", "1", "2", "3", "4", "5"];
   let result = Math.floor((Math.random() * replies.length));
 
   if(result === 0) {
@@ -123,15 +123,6 @@ module.exports.run = async (bot, message, args) => {
     .setAuthor("Dance 💃", dncicon)
     .setDescription(`***${message.author.username} is dancing with ${rUser.user.username}.***\nGreat moves! 👏`)
     .setImage (`https://media.giphy.com/media/BxOoraoIwYdG/giphy.gif`);
-    return message.channel.send(dncembed);
-  }
-  if(result === 6) {
-    let dncicon = message.author.displayAvatarURL;
-    let dncembed = new Discord.RichEmbed()
-    .setColor("#1fd1c8")
-    .setAuthor("Dance 💃", dncicon)
-    .setDescription(`***${message.author.username} is dancing with ${rUser.user.username}.***\nGreat moves! 👏`)
-    .setImage (`https://media.giphy.com/media/Oq98jm2ZtJbaw/giphy.gif`);
     return message.channel.send(dncembed);
   }
 }
