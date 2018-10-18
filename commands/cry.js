@@ -5,8 +5,7 @@ module.exports.run = async (bot, message, args) => {
     let cryicon = message.author.displayAvatarURL;
     let cryembed = new Discord.RichEmbed()
     .setColor("#1fd1c8")
-    .setAuthor("Cry 😭", cryicon)
-    .setDescription(`***${message.author.username} is crying!***\nSomeone, do something! 😭`)
+    .setAuthor(`${message.author.username} is crying!`, cryicon)
     .setImage (`https://media.giphy.com/media/L95W4wv8nnb9K/giphy.gif`);
     return message.channel.send(cryembed);
   }
