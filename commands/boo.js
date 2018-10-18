@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
   let booembed = new Discord.RichEmbed()
   .setColor("#1fd1c8")
   .setAuthor("Boo 👻", booicon)
-  .setDescription(`***${message.author.username} made ${rUser.user.username} jump!***\n**Scream** 😱`)
+  .setDescription(`***${message.author.username} made ${rUser.user.username} jump!***\n*[Screams]* 😱`)
   .setImage (`https://media.giphy.com/media/ztL00UZOuenpC/giphy.gif`);
   return message.channel.send(booembed);
 }
