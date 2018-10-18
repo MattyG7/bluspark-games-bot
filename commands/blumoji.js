@@ -5,16 +5,10 @@ module.exports.run = async (bot, message, args) => {
   let result = Math.floor((Math.random() * replies.length));
 
   if(result === 0) {
-    let blmjiembed = new Discord.RichEmbed()
-    .setColor("#000000")
-    .setDescription(`:spark:`)
-    return message.channel.send(blmjiembed);
+    return message.channel.send(":spark:");
   }
   if(result === 1) {
-    let blmjiembed = new Discord.RichEmbed()
-    .setColor("#000000")
-    .setDescription(`:masterball:`)
-    return message.channel.send(blmjiembed);
+    return message.channel.send(":masterball:");
   }
 }
 
