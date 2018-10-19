@@ -25,13 +25,13 @@ module.exports.run = async (bot, message, args) => {
   if(args[0] === "bread") {
     let replies = ["0", "1", "2"];
     let result = Math.floor((Math.random() * replies.length));
-    if (replies[result] === "0"]) {
+    if (replies[result] === "0") {
       return message.channel.send(`<:blubread1:502950379491950593>`);
     }
-    if (replies[result] === "1"]) {
+    if (replies[result] === "1") {
       return message.channel.send(`<:blubread2:502950394914275343>`);
     }
-    if (replies[result] === "2"]) {
+    if (replies[result] === "2") {
       return message.channel.send(`<:blubread3:502950408650489896>`);
     }
   }
