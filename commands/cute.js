@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
       let thnkembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is feeling cute ☺️`, thnkicon)
-      .setImage (`https://media.tenor.com/images/a290e077a0c27d60648a53f74584f034/tenor.gif`);
+      .setImage (`https://media1.tenor.com/images/1b807417fd26cf51f580fc2963323391/tenor.gif?itemid=10196395`);
       return message.channel.send(thnkembed);
     }
   }
