@@ -35,8 +35,7 @@ module.exports.run = async (bot, message, args) => {
       let sdicon = message.author.displayAvatarURL;
       let sdembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
-      .setAuthor("Sad 😔", sdicon)
-      .setDescription(`***${message.author.username} is sad because of ${rUser.user.username}.***\nWhat did you do? 😟`)
+      .setAuthor(`${message.author.username} is very sad.`, sdicon)
       .setImage (`https://media1.tenor.com/images/6ae4a0ce2705f31738917d0ad56f9606/tenor.gif?itemid=12793728`);
       return message.channel.send(sdembed);
     }
@@ -44,8 +43,7 @@ module.exports.run = async (bot, message, args) => {
       let sdicon = message.author.displayAvatarURL;
       let sdembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
-      .setAuthor("Sad 😔", sdicon)
-      .setDescription(`***${message.author.username} is sad because of ${rUser.user.username}.***\nWhat did you do? 😟`)
+      .setAuthor(`${message.author.username} is very sad.`, sdicon)
       .setImage (`https://media.tenor.com/images/924dacb0cf8cefd847712eed38729d09/tenor.gif`);
       return message.channel.send(sdembed);
     }
