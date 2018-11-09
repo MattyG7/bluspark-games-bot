@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
       let thnkembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is feeling cute ☺️`, thnkicon)
-      .setImage (`https://tenor.com/es/ver/charlotte-ayumi-otosaka-ayumi-otosaka-gif-5894731`);
+      .setImage (`https://media.tenor.com/images/a290e077a0c27d60648a53f74584f034/tenor.gif`);
       return message.channel.send(thnkembed);
     }
     if(result === 1) {
@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
       let thnkembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is feeling cute ☺️`, thnkicon)
-      .setImage (`https://tenor.com/es/ver/charlotte-ayumi-otosaka-ayumi-otosaka-gif-5894731`);
+      .setImage (`https://media.tenor.com/images/a290e077a0c27d60648a53f74584f034/tenor.gif`);
       return message.channel.send(thnkembed);
     }
   }
