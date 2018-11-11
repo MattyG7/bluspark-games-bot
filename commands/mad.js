@@ -34,7 +34,7 @@ module.exports.run = async (bot, message, args) => {
   if(!rUser) return message.channel.send(`User not found! 😕`);
   if(rUser.id === message.author.id) return message.channel.send(`***${message.author.username} is mad at themself. Stay back until they calm down.***`);
 
-  let replies = ["0", "1", "2",;
+  let replies = ["0", "1", "2"];
   let result = Math.floor((Math.random() * replies.length));
 
   if(result === 0) {
