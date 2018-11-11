@@ -63,7 +63,7 @@ module.exports.run = async (bot, message, args) => {
       let sdembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is very happy.`, sdicon)
-      .setImage (`http://images6.fanpop.com/image/photos/39300000/GIFs-charlotte-anime-39361286-540-304.gif`);
+      .setImage (`https://images6.fanpop.com/image/photos/39300000/GIFs-charlotte-anime-39361286-540-304.gif`);
       return message.channel.send(sdembed);
     }
     if(result === 2) {
@@ -113,7 +113,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Happy 😊", sdicon)
     .setDescription(`***${message.author.username} is happy because of ${rUser.user.username}.***\n😄`)
-    .setImage (`http://images6.fanpop.com/image/photos/39300000/GIFs-charlotte-anime-39361286-540-304.gif`);
+    .setImage (`https://images6.fanpop.com/image/photos/39300000/GIFs-charlotte-anime-39361286-540-304.gif`);
     return message.channel.send(sdembed);
   }
   if(result === 2) {
