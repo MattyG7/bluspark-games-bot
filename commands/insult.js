@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
       let insltembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is insulted!`, inslticon)
-      .setImage (`http://i.imgur.com/0Libm89.gif`);
+      .setImage (`https://i.imgur.com/0Libm89.gif`);
       return message.channel.send(insltembed);
     }
     if(result === 1) {
@@ -70,7 +70,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Insult 😝", inslticon)
     .setDescription(`***${rUser.user.username} insulted ${message.author.username}.***\nWas that necessary? 😐`)
-    .setImage (`http://i.imgur.com/vu3Q8U8.gif`);
+    .setImage (`https://i.imgur.com/vu3Q8U8.gif`);
     return message.channel.send(insltembed);
   }
 }
