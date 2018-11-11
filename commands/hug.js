@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   if(!rUser) return message.channel.send(`User not found! 😕`);
   if(rUser.id === message.author.id) return message.channel.send(`***Aw. Do you need a hug, ${message.author.username}?***`);
 
-  let replies = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+  let replies = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"];
   let result = Math.floor((Math.random() * replies.length));
 
   if(result === 0) {
@@ -123,6 +123,15 @@ module.exports.run = async (bot, message, args) => {
     .setAuthor("Hug 🤗", hgicon)
     .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
     .setImage (`https://media1.tenor.com/images/e58eb2794ff1a12315665c28d5bc3f5e/tenor.gif?itemid=10195705`);
+    return message.channel.send(hgembed);
+  }
+  if(result === 13) {
+    let hgicon = message.author.displayAvatarURL;
+    let hgembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Hug 🤗", hgicon)
+    .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
+    .setImage (`https://media1.tenor.com/images/6d73b0a9cadef5310be4b6160d2f959a/tenor.gif?itemid=12099823`);
     return message.channel.send(hgembed);
   }
 }

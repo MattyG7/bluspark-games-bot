@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
   if (!args[0]) {
-    let replies = ["0", "1", "2", "3", "4", "5", "6"];
+    let replies = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
     let result = Math.floor((Math.random() * replies.length));
 
     if(result === 0) {
@@ -61,9 +61,23 @@ module.exports.run = async (bot, message, args) => {
       .setImage (`https://media1.tenor.com/images/766599022416cc0b7b7b1bd2040eb2db/tenor.gif?itemid=12039886`);
       return message.channel.send(dncembed);
     }
+    if(result === 7) {
+      let dncicon = message.author.displayAvatarURL;
+      let dncembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} is dancing!`, dncicon)
+      .setImage (`https://tenor.com/view/anime-dance-cute-girl-gif-11983564`);
+      return message.channel.send(dncembed);
+    }
+    if(result === 8) {
+      let dncicon = message.author.displayAvatarURL;
+      let dncembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} is dancing!`, dncicon)
+      .setImage (`https://media1.tenor.com/images/0884bb89a026d49791aa404008843108/tenor.gif?itemid=12793536`);
+      return message.channel.send(dncembed);
+    }
   }
-
-
   let rUser = message.mentions.members.first();
   if(args[0] && !rUser) return message.channel.send(`User not found! 😕`);
   if(rUser.id === message.author.id) return message.channel.send(`***${message.author.username} is laughing at themself. Everyone, back away slowly...***`);

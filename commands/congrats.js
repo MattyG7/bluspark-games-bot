@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   if(!rUser) return message.channel.send(`User not found! 😕`);
   if(rUser.id === message.author.id) return message.channel.send(`***${message.author.username} feels proud. ☺️***`);
 
-  let replies = ["0", "1", "2", "3"];
+  let replies = ["0", "1", "2", "3", "4", "5", "6"];
   let result = Math.floor((Math.random() * replies.length));
 
   if(result === 0) {
@@ -42,6 +42,33 @@ module.exports.run = async (bot, message, args) => {
     .setAuthor("Congrats 🎊", cngrticon)
     .setDescription(`***${message.author.username} says "Congratulations, ${rUser.user.username}"!***\n🎉🎉🎉`)
     .setImage (`https://data.whicdn.com/images/217035852/original.gif`);
+    return message.channel.send(cngrtembed);
+  }
+  if(result === 4) {
+    let cngrticon = message.author.displayAvatarURL;
+    let cngrtembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Congrats 🎊", cngrticon)
+    .setDescription(`***${message.author.username} says "Congratulations, ${rUser.user.username}"!***\n🎉🎉🎉`)
+    .setImage (`https://media1.tenor.com/images/ee3db779e9badce9be497e5a4b7773b9/tenor.gif?itemid=9586002`);
+    return message.channel.send(cngrtembed);
+  }
+  if(result === 5) {
+    let cngrticon = message.author.displayAvatarURL;
+    let cngrtembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Congrats 🎊", cngrticon)
+    .setDescription(`***${message.author.username} says "Congratulations, ${rUser.user.username}"!***\n🎉🎉🎉`)
+    .setImage (`https://media.giphy.com/media/VgClqfxi2w1KU/giphy.gif`);
+    return message.channel.send(cngrtembed);
+  }
+  if(result === 6) {
+    let cngrticon = message.author.displayAvatarURL;
+    let cngrtembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Congrats 🎊", cngrticon)
+    .setDescription(`***${message.author.username} says "Congratulations, ${rUser.user.username}"!***\n🎉🎉🎉`)
+    .setImage (`https://media.giphy.com/media/DosBpXRDhrpDi/giphy.gif`);
     return message.channel.send(cngrtembed);
   }
 }
