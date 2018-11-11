@@ -58,6 +58,12 @@ bot.on("message", async message => {
     if (commandfile) commandfile.run(bot, message, args, author, messageArray);
   }
   else {
+    if (message.content === "Thanks" || message.content === "Thank you") {
+      return message.channel.send(`You're welcome.`);
+    }
+    if (message.content === "Not you" || message.content === "No not you") {
+      return message.channel.send(`Oh, sorry! 😅`);
+    }
     return;
   }
 
