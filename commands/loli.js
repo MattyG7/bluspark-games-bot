@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
   if(!args[0]) {
-    let replies = ["0", "1", "2", "3"];
+    let replies = ["0", "1", "2", "3", "4", "5"];
     let result = Math.floor((Math.random() * replies.length));
 
     if(result === 0) {
@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
       let loliembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       //.setAuthor(`A loli a day keps the doctor away`, loliicon)
-      .setImage (`https://media1.tenor.com/images/b8b977f770edc982432779a0e4774bf9/tenor.gif?itemid=5102525`);
+      .setImage (`https://blusparkstudio.com/discord/loli_1.gif`);
       return message.channel.send(loliembed);
     }
     if(result === 1) {
@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
       let loliembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       //.setAuthor(`A loli a day keps the doctor away`, loliicon)
-      .setImage (`https://media1.tenor.com/images/ae6d71cdb35082ac7a77afe20aad28c4/tenor.gif?itemid=5600129`);
+      .setImage (`https://blusparkstudio.com/discord/loli_2.gif`);
       return message.channel.send(loliembed);
     }
     if(result === 2) {
@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
       let loliembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       //.setAuthor(`A loli a day keps the doctor away`, loliicon)
-      .setImage (`https://media.tenor.com/images/567dbf3ec761c007d8ff3049b357b65c/tenor.gif`);
+      .setImage (`https://blusparkstudio.com/discord/loli_3.gif`);
       return message.channel.send(loliembed);
     }
     if(result === 3) {
@@ -34,15 +34,31 @@ module.exports.run = async (bot, message, args) => {
       let loliembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       //.setAuthor(`A loli a day keps the doctor away`, loliicon)
-      .setImage (`https://media1.tenor.com/images/a4b811e15881205ca2244abd91c42014/tenor.gif?itemid=7426168`);
+      .setImage (`https://blusparkstudio.com/discord/loli_4.gif`);
+      return message.channel.send(loliembed);
+    }
+    if(result === 4) {
+      let loliicon = message.author.displayAvatarURL;
+      let loliembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      //.setAuthor(`A loli a day keps the doctor away`, loliicon)
+      .setImage (`https://blusparkstudio.com/discord/loli_5.gif`);
+      return message.channel.send(loliembed);
+    }
+    if(result === 5) {
+      let loliicon = message.author.displayAvatarURL;
+      let loliembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      //.setAuthor(`A loli a day keps the doctor away`, loliicon)
+      .setImage (`https://blusparkstudio.com/discord/loli_8.gif`);
       return message.channel.send(loliembed);
     }
   }
   let rUser = message.mentions.members.first();
   if(!rUser) return message.channel.send(`User not found! 😕`);
-  if(rUser.id === message.author.id) return message.channel.send(`***${message.author.username} likes lolis. Well, they are cute aren't they.***`);
+  if(rUser.id === message.author.id) return message.channel.send(`***${message.author.username} likes lolis.***`);
 
-  let replies = ["0", "1", "2", "3", "4", "5", "6", "7"];
+  let replies = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
   let result = Math.floor((Math.random() * replies.length));
 
   if(result === 0) {
@@ -51,7 +67,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Loli 👧", loliicon)
     .setDescription(`***${message.author.username} says that ${rUser.user.username} likes lolis.***\n❤`)
-    .setImage (`https://media1.tenor.com/images/b8b977f770edc982432779a0e4774bf9/tenor.gif?itemid=5102525`);
+    .setImage (`https://blusparkstudio.com/discord/loli_1.gif`);
     return message.channel.send(loliembed);
   }
   if(result === 1) {
@@ -59,8 +75,8 @@ module.exports.run = async (bot, message, args) => {
     let loliembed = new Discord.RichEmbed()
     .setColor("#1fd1c8")
     .setAuthor("Loli 👧", loliicon)
-    .setDescription(`***${message.author.username} says that ${rUser.user.username} likes lolis.***\nGo sit with her. ❤`)
-    .setImage (`https://media1.tenor.com/images/ae6d71cdb35082ac7a77afe20aad28c4/tenor.gif?itemid=5600129`);
+    .setDescription(`***${message.author.username} says that ${rUser.user.username} likes lolis.***\nI dare ya to go sit with her.`)
+    .setImage (`https://blusparkstudio.com/discord/loli_2.gif`);
     return message.channel.send(loliembed);
   }
   if(result === 2) {
@@ -68,8 +84,8 @@ module.exports.run = async (bot, message, args) => {
     let loliembed = new Discord.RichEmbed()
     .setColor("#1fd1c8")
     .setAuthor("Loli 👧", loliicon)
-    .setDescription(`***${message.author.username} says that ${rUser.user.username} likes lolis.***\nNom nom. ❤`)
-    .setImage (`https://media.tenor.com/images/567dbf3ec761c007d8ff3049b357b65c/tenor.gif`);
+    .setDescription(`***${message.author.username} says that ${rUser.user.username} likes lolis.***\nNom nom. 😋`)
+    .setImage (`https://blusparkstudio.com/discord/loli_3.gif`);
     return message.channel.send(loliembed);
   }
   if(result === 3) {
@@ -78,7 +94,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Loli 👧", loliicon)
     .setDescription(`***${message.author.username} says that ${rUser.user.username} likes lolis.***\n❤`)
-    .setImage (`https://media1.tenor.com/images/a4b811e15881205ca2244abd91c42014/tenor.gif?itemid=7426168`);
+    .setImage (`https://blusparkstudio.com/discord/loli_4.gif`);
     return message.channel.send(loliembed);
   }
   if(result === 4) {
@@ -87,7 +103,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Loli 👧", loliicon)
     .setDescription(`***${rUser.user.username} is a loli.***\n😜`)
-    .setImage (`https://media1.tenor.com/images/b8b977f770edc982432779a0e4774bf9/tenor.gif?itemid=5102525`);
+    .setImage (`https://blusparkstudio.com/discord/loli_1.gif`);
     return message.channel.send(loliembed);
   }
   if(result === 5) {
@@ -96,7 +112,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Loli 👧", loliicon)
     .setDescription(`***${rUser.user.username} is a loli.***\n😜`)
-    .setImage (`https://media1.tenor.com/images/ae6d71cdb35082ac7a77afe20aad28c4/tenor.gif?itemid=5600129`);
+    .setImage (`https://blusparkstudio.com/discord/loli_2.gif`);
     return message.channel.send(loliembed);
   }
   if(result === 6) {
@@ -105,7 +121,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Loli 👧", loliicon)
     .setDescription(`***${rUser.user.username} is a loli.***\n😜`)
-    .setImage (`https://media.tenor.com/images/567dbf3ec761c007d8ff3049b357b65c/tenor.gif`);
+    .setImage (`https://blusparkstudio.com/discord/loli_3.gif`);
     return message.channel.send(loliembed);
   }
   if(result === 7) {
@@ -114,7 +130,43 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Loli 👧", loliicon)
     .setDescription(`***${rUser.user.username} is a loli.***\n😜`)
-    .setImage (`https://media1.tenor.com/images/a4b811e15881205ca2244abd91c42014/tenor.gif?itemid=7426168`);
+    .setImage (`https://blusparkstudio.com/discord/loli_4.gif`);
+    return message.channel.send(loliembed);
+  }
+  if(result === 8) {
+    let loliicon = message.author.displayAvatarURL;
+    let loliembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Loli 👧", loliicon)
+    .setDescription(`***${rUser.user.username} is a loli...with a whale.***\n🐋`)
+    .setImage (`https://blusparkstudio.com/discord/loli_5.gif`);
+    return message.channel.send(loliembed);
+  }
+  if(result === 9) {
+    let loliicon = message.author.displayAvatarURL;
+    let loliembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Loli 👧", loliicon)
+    .setDescription(`***${rUser.user.username} is a sad loli.***\n😢`)
+    .setImage (`https://blusparkstudio.com/discord/loli_6.gif`);
+    return message.channel.send(loliembed);
+  }
+  if(result === 10) {
+    let loliicon = message.author.displayAvatarURL;
+    let loliembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Loli 👧", loliicon)
+    .setDescription(`***${rUser.user.username} is a hungry loli.***\n🍪`)
+    .setImage (`https://blusparkstudio.com/discord/loli_7.gif`);
+    return message.channel.send(loliembed);
+  }
+  if(result === 11) {
+    let loliicon = message.author.displayAvatarURL;
+    let loliembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Loli 👧", loliicon)
+    .setDescription(`***${rUser.user.username} is a hungry loli.***\n🍪`)
+    .setImage (`https://blusparkstudio.com/discord/loli_8.gif`);
     return message.channel.send(loliembed);
   }
 }

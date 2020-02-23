@@ -2,23 +2,23 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
   if (!args[0]) {
-    let replies = ["0", "1", "2"];
+    let replies = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
     let result = Math.floor((Math.random() * replies.length));
 
     if(result === 0) {
       let inslticon = message.author.displayAvatarURL;
       let insltembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
-      .setAuthor(`${message.author.username} is insulted!`, inslticon)
-      .setImage (`https://i.imgur.com/0Libm89.gif`);
+      .setAuthor(`${message.author.username} got insulted!`, inslticon)
+      .setImage (`https://blusparkstudio.com/discord/insult_1.gif`);
       return message.channel.send(insltembed);
     }
     if(result === 1) {
       let inslticon = message.author.displayAvatarURL;
       let insltembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
-      .setAuthor(`${message.author.username} is insulted!`, inslticon)
-      .setImage (`https://img1.ak.crunchyroll.com/i/spire3/94befc6b8045b4fee64cfe393d280f191453324715_full.gif`);
+      .setAuthor(`${message.author.username} got insulted!`, inslticon)
+      .setImage (`https://blusparkstudio.com/discord/insult_2.gif`);
       return message.channel.send(insltembed);
     }
     if(result === 2) {
@@ -26,7 +26,71 @@ module.exports.run = async (bot, message, args) => {
       let insltembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is insulted!`, inslticon)
-      .setImage (`https://media.giphy.com/media/13PZmq2wCkuCbK/giphy.gif`);
+      .setImage (`https://blusparkstudio.com/discord/insult_3.gif`);
+      return message.channel.send(insltembed);
+    }
+    if(result === 3) {
+      let inslticon = message.author.displayAvatarURL;
+      let insltembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} got insulted!`, inslticon)
+      .setImage (`https://blusparkstudio.com/discord/insult_4.gif`);
+      return message.channel.send(insltembed);
+    }
+    if(result === 4) {
+      let inslticon = message.author.displayAvatarURL;
+      let insltembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} got insulted!`, inslticon)
+      .setImage (`https://blusparkstudio.com/discord/insult_5.gif`);
+      return message.channel.send(insltembed);
+    }
+    if(result === 5) {
+      let inslticon = message.author.displayAvatarURL;
+      let insltembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} got insulted!`, inslticon)
+      .setImage (`https://blusparkstudio.com/discord/insult_6.gif`);
+      return message.channel.send(insltembed);
+    }
+    if(result === 6) {
+      let inslticon = message.author.displayAvatarURL;
+      let insltembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} got insulted!`, inslticon)
+      .setImage (`https://blusparkstudio.com/discord/insult_7.gif`);
+      return message.channel.send(insltembed);
+    }
+    if(result === 7) {
+      let inslticon = message.author.displayAvatarURL;
+      let insltembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} got insulted!`, inslticon)
+      .setImage (`https://blusparkstudio.com/discord/insult_8.gif`);
+      return message.channel.send(insltembed);
+    }
+    if(result === 8) {
+      let inslticon = message.author.displayAvatarURL;
+      let insltembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} is insulted!`, inslticon)
+      .setImage (`https://blusparkstudio.com/discord/insult_9.gif`);
+      return message.channel.send(insltembed);
+    }
+    if(result === 9) {
+      let inslticon = message.author.displayAvatarURL;
+      let insltembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} got insulted!`, inslticon)
+      .setImage (`https://blusparkstudio.com/discord/insult_10.gif`);
+      return message.channel.send(insltembed);
+    }
+    if(result === 10) {
+      let inslticon = message.author.displayAvatarURL;
+      let insltembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} got insulted!`, inslticon)
+      .setImage (`https://blusparkstudio.com/discord/insult_11.gif`);
       return message.channel.send(insltembed);
     }
   }
@@ -34,7 +98,7 @@ module.exports.run = async (bot, message, args) => {
   if(!rUser) return message.channel.send(`User not found! 😕`);
   if(rUser.id === message.author.id) return message.channel.send(`***${message.author.username} insulted themself. You're not the only one who does that, don't worry.***`);
 
-  let replies = ["0", "1", "2", "3"];
+  let replies = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
   let result = Math.floor((Math.random() * replies.length));
 
   if(result === 0) {
@@ -43,7 +107,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Insult 😝", inslticon)
     .setDescription(`***${rUser.user.username} insulted ${message.author.username}.***\nWas that necessary? 😐`)
-    .setImage (`http://i.imgur.com/0Libm89.gif`);
+    .setImage (`https://blusparkstudio.com/discord/insult_1.gif`);
     return message.channel.send(insltembed);
   }
   if(result === 1) {
@@ -52,7 +116,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Insult 😝", inslticon)
     .setDescription(`***${rUser.user.username} insulted ${message.author.username}.***\nWas that necessary? 😐`)
-    .setImage (`https://img1.ak.crunchyroll.com/i/spire3/94befc6b8045b4fee64cfe393d280f191453324715_full.gif`);
+    .setImage (`https://blusparkstudio.com/discord/insult_2.gif`);
     return message.channel.send(insltembed);
   }
   if(result === 2) {
@@ -61,7 +125,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Insult 😝", inslticon)
     .setDescription(`***${rUser.user.username} insulted ${message.author.username}.***\nWas that necessary? 😐`)
-    .setImage (`https://media.tenor.com/images/c97680c9aafdb5e7e0a6c8ff1f35d1e1/tenor.gif`);
+    .setImage (`https://blusparkstudio.com/discord/insult_4.gif`);
     return message.channel.send(insltembed);
   }
   if(result === 3) {
@@ -70,7 +134,52 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Insult 😝", inslticon)
     .setDescription(`***${rUser.user.username} insulted ${message.author.username}.***\nWas that necessary? 😐`)
-    .setImage (`https://i.imgur.com/vu3Q8U8.gif`);
+    .setImage (`https://blusparkstudio.com/discord/insult_5.gif`);
+    return message.channel.send(insltembed);
+  }
+  if(result === 4) {
+    let inslticon = message.author.displayAvatarURL;
+    let insltembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Insult 😝", inslticon)
+    .setDescription(`***${rUser.user.username} insulted ${message.author.username}.***\nWas that necessary? 😐`)
+    .setImage (`https://blusparkstudio.com/discord/insult_6.gif`);
+    return message.channel.send(insltembed);
+  }
+  if(result === 5) {
+    let inslticon = message.author.displayAvatarURL;
+    let insltembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Insult 😝", inslticon)
+    .setDescription(`***${rUser.user.username} insulted ${message.author.username}.***\nWas that necessary? 😐`)
+    .setImage (`https://blusparkstudio.com/discord/insult_7.gif`);
+    return message.channel.send(insltembed);
+  }
+  if(result === 6) {
+    let inslticon = message.author.displayAvatarURL;
+    let insltembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Insult 😝", inslticon)
+    .setDescription(`***${rUser.user.username} insulted ${message.author.username}.***\nWas that necessary? 😐`)
+    .setImage (`https://blusparkstudio.com/discord/insult_8.gif`);
+    return message.channel.send(insltembed);
+  }
+  if(result === 7) {
+    let inslticon = message.author.displayAvatarURL;
+    let insltembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Insult 😝", inslticon)
+    .setDescription(`***${rUser.user.username} insulted ${message.author.username}.***\nWas that necessary? 😐`)
+    .setImage (`https://blusparkstudio.com/discord/insult_10.gif`);
+    return message.channel.send(insltembed);
+  }
+  if(result === 8) {
+    let inslticon = message.author.displayAvatarURL;
+    let insltembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Insult 😝", inslticon)
+    .setDescription(`***${rUser.user.username} insulted ${message.author.username}.***\nWas that necessary? 😐`)
+    .setImage (`https://blusparkstudio.com/discord/insult_11.gif`);
     return message.channel.send(insltembed);
   }
 }

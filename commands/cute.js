@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
   if (!args[0]) {
-    let replies = ["0", "1"];
+    let replies = ["0", "1", "2", "3", "4"];
     let result = Math.floor((Math.random() * replies.length));
 
     if(result === 0) {
@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
       let thnkembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is feeling cute ☺️`, thnkicon)
-      .setImage (`https://media.tenor.com/images/a290e077a0c27d60648a53f74584f034/tenor.gif`);
+      .setImage (`https://blusparkstudio.com/discord/cute_1.gif`);
       return message.channel.send(thnkembed);
     }
     if(result === 1) {
@@ -18,21 +18,77 @@ module.exports.run = async (bot, message, args) => {
       let thnkembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is feeling cute ☺️`, thnkicon)
-      .setImage (`https://media1.tenor.com/images/1b807417fd26cf51f580fc2963323391/tenor.gif?itemid=10196395`);
+      .setImage (`https://blusparkstudio.com/discord/cute_2.gif`);
+      return message.channel.send(thnkembed);
+    }
+    if(result === 2) {
+      let thnkicon = message.author.displayAvatarURL;
+      let thnkembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} is feeling cute ☺️`, thnkicon)
+      .setImage (`https://blusparkstudio.com/discord/cute_4.gif`);
+      return message.channel.send(thnkembed);
+    }
+    if(result === 3) {
+      let thnkicon = message.author.displayAvatarURL;
+      let thnkembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} is feeling cute ☺️`, thnkicon)
+      .setImage (`https://blusparkstudio.com/discord/cute_5.gif`);
+      return message.channel.send(thnkembed);
+    }
+    if(result === 4) {
+      let thnkicon = message.author.displayAvatarURL;
+      let thnkembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} is feeling cute ☺️`, thnkicon)
+      .setImage (`https://blusparkstudio.com/discord/cute_6.gif`);
       return message.channel.send(thnkembed);
     }
   }
   let rUser = message.mentions.members.first();
   if(args[0] && !rUser) return message.channel.send(`User not found! 😕`);
-  if(rUser.id === message.author.id) return message.channel.send(`***${message.author.username} thinks that they're cute. Well...I don't disagree!***`);
+  if(rUser.id === message.author.id) return message.channel.send(`***${message.author.username} thinks that they're cute. Well...I don't disagree! ;)***`);
 
-  let thnkicon = message.author.displayAvatarURL;
-  let thnkembed = new Discord.RichEmbed()
-  .setColor("#1fd1c8")
-  .setAuthor("Thinking 🤔", thnkicon)
-  .setDescription(`***${message.author.username} thinks ${rUser.user.username} is cute.***\nI can see why 😍`)
-  .setImage (`http://68.media.tumblr.com/53ca3d877092b34ca450c6722ab29a20/tumblr_ovcydrVAcl1qa94xto1_540.gif`);
-  return message.channel.send(thnkembed);
+  let replies = ["0", "1", "2", "3"];
+  let result = Math.floor((Math.random() * replies.length));
+
+  if(result === 0) {
+    let cticon = message.author.displayAvatarURL;
+    let ctembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Cute ☺️", cticon)
+    .setDescription(`***${message.author.username} thinks ${rUser.user.username} is cute.***\nI can see why ❤️`)
+    .setImage (`https://blusparkstudio.com/discord/cute_3.gif`);
+    return message.channel.send(ctembed);
+  }
+  if(result === 1) {
+    let cticon = message.author.displayAvatarURL;
+    let ctembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Cute ☺️", cticon)
+    .setDescription(`***${message.author.username} thinks ${rUser.user.username} is cute.***\nI can see why ❤️`)
+    .setImage (`https://blusparkstudio.com/discord/cute_7.gif`);
+    return message.channel.send(ctembed);
+  }
+  if(result === 2) {
+    let cticon = message.author.displayAvatarURL;
+    let ctembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Cute ☺️", cticon)
+    .setDescription(`***${message.author.username} thinks ${rUser.user.username} is cute.***\nI can see why ❤️`)
+    .setImage (`https://blusparkstudio.com/discord/cute_8.gif`);
+    return message.channel.send(ctembed);
+  }
+  if(result === 3) {
+    let cticon = message.author.displayAvatarURL;
+    let ctembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Cute ☺️", cticon)
+    .setDescription(`***${message.author.username} thinks ${rUser.user.username} is cute.***\n❤️`)
+    .setImage (`https://blusparkstudio.com/discord/cute_9.gif`);
+    return message.channel.send(ctembed);
+  }
 }
 
 module.exports.help = {

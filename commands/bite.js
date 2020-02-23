@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   if(!rUser) return message.channel.send(`User not found! 😕`);
   if(rUser.id === message.author.id) return message.channel.send(`***${message.author.username} just bit themself. Ouch!***`);
 
-  let replies = ["0", "1"];
+  let replies = ["0", "1", "2", "3", "4", "5", "6"];
   let result = Math.floor((Math.random() * replies.length));
 
   if(result === 0) {
@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Bite 😁", bticon)
     .setDescription(`***${message.author.username} just bit ${rUser.user.username}.***\nOww! 😱`)
-    .setImage (`https://media1.tenor.com/images/a65ebdd440e6dfe12a6ad897c999032d/tenor.gif?itemid=12090625`);
+    .setImage (`https://blusparkstudio.com/discord/bite_1.gif`);
     return message.channel.send(btembed);
   }
   if(result === 1) {
@@ -23,7 +23,52 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Bite 😁", bticon)
     .setDescription(`***${message.author.username} just bit ${rUser.user.username}.***\nOww! 😱`)
-    .setImage (`https://nerdultlife.files.wordpress.com/2015/09/7ilh93o.gif`);
+    .setImage (`https://blusparkstudio.com/discord/bite_2.gif`);
+    return message.channel.send(btembed);
+  }
+  if(result === 2) {
+    let bticon = message.author.displayAvatarURL;
+    let btembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Bite 😁", bticon)
+    .setDescription(`***${message.author.username} just bit ${rUser.user.username}.***\nOww! 😱`)
+    .setImage (`https://blusparkstudio.com/discord/bite_3.gif`);
+    return message.channel.send(btembed);
+  }
+  if(result === 3) {
+    let bticon = message.author.displayAvatarURL;
+    let btembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Bite 😁", bticon)
+    .setDescription(`***${message.author.username} just bit ${rUser.user.username}.***\nOww! 😱`)
+    .setImage (`https://blusparkstudio.com/discord/bite_4.gif`);
+    return message.channel.send(btembed);
+  }
+  if(result === 4) {
+    let bticon = message.author.displayAvatarURL;
+    let btembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Bite 😁", bticon)
+    .setDescription(`***${message.author.username} just bit ${rUser.user.username}.***\nOww! 😱`)
+    .setImage (`https://blusparkstudio.com/discord/bite_5.gif`);
+    return message.channel.send(btembed);
+  }
+  if(result === 5) {
+    let bticon = message.author.displayAvatarURL;
+    let btembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Bite 😁", bticon)
+    .setDescription(`***${message.author.username} just bit ${rUser.user.username}.***\nOww! 😱`)
+    .setImage (`https://blusparkstudio.com/discord/bite_6.gif`);
+    return message.channel.send(btembed);
+  }
+  if(result === 6) {
+    let bticon = message.author.displayAvatarURL;
+    let btembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Bite 😁", bticon)
+    .setDescription(`***${message.author.username} just bit ${rUser.user.username}.***\nOww! 😱`)
+    .setImage (`https://blusparkstudio.com/discord/bite_7.gif`);
     return message.channel.send(btembed);
   }
 }

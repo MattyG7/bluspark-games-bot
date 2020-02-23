@@ -16,6 +16,10 @@ module.exports.run = async (bot, message, args) => {
     .setFooter("Alternate commands: ~calc ~calculator");
     return message.channel.send(mthembed);
   }
+  let nothelp = "***~calc***";
+  let nothelpp = "***~calc help***";
+  if (args[0] !== "help" && !args[1]) return message.channel.send(`Did you mean ${nothelp} or ${nothelpp}?`);
+  if (args[1] != "+" && args[1] != "-" && args[1] != "x" && args[1] != "*" && args[1] != "/" && args[1] != "^") return message.channel.send(`Please use one of these: ${symbls}`);
   if (args[1] === "+") {
     if (isNaN(args[0]) || isNaN(args[2])) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
     if(args[3]) return message.channel.send(`Please use the correct format, ${message.author.username}. Type *~calc help* for assistance.`);
@@ -102,10 +106,6 @@ module.exports.run = async (bot, message, args) => {
     .setDescription(`${sum} is ${ans}`);
     return message.channel.send(mthembed);
   }
-  let nothelp = "***~calc***";
-  let nothelpp = "***~calc help***";
-  if (args[0] != "help" && !args[1]) return message.channel.send(`Did you mean ${nothelp} or ${nothelpp}?`);
-  if (args[1] != "+" && args[1] != "-" && args[1] != "x" && args[1] != "*" && args[1] != "/" && args[1] != "^") return message.channel.send(`Please use one of these: ${symbls}`);
 }
 
 module.exports.help = {

@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
   if (!args[0]) {
-    let replies = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
+    let replies = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
     let result = Math.floor((Math.random() * replies.length));
 
     if(result === 0) {
@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
       let dncembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is dancing!`, dncicon)
-      .setImage (`https://media1.tenor.com/images/e87bc763c55a4a39272926007126961e/tenor.gif?itemid=10596689`);
+      .setImage (`https://blusparkstudio.com/discord/dance_1.gif`);
       return message.channel.send(dncembed);
     }
     if(result === 1) {
@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
       let dncembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is dancing!`, dncicon)
-      .setImage (`https://media.giphy.com/media/11lxCeKo6cHkJy/giphy.gif`);
+      .setImage (`https://blusparkstudio.com/discord/dance_2.gif`);
       return message.channel.send(dncembed);
     }
     if(result === 2) {
@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
       let dncembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is dancing...with guns?!`, dncicon)
-      .setImage (`https://media.giphy.com/media/YvFgC6XIFwtrO/giphy.gif`);
+      .setImage (`https://blusparkstudio.com/discord/dance_3.gif`);
       return message.channel.send(dncembed);
     }
     if(result === 3) {
@@ -34,15 +34,15 @@ module.exports.run = async (bot, message, args) => {
       let dncembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is dancing!`, dncicon)
-      .setImage (`https://media.giphy.com/media/aRjlzL31lrWDe/giphy.gif`);
+      .setImage (`https://blusparkstudio.com/discord/dance_4.gif`);
       return message.channel.send(dncembed);
     }
     if(result === 4) {
       let dncicon = message.author.displayAvatarURL;
       let dncembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
-      .setAuthor(`${message.author.username} is quite a cute dancer!`, dncicon)
-      .setImage (`https://media.giphy.com/media/vSvRjXnAVRNHG/giphy.gif`);
+      .setAuthor(`${message.author.username} is dancing!`, dncicon)
+      .setImage (`https://blusparkstudio.com/discord/dance_5.gif`);
       return message.channel.send(dncembed);
     }
     if(result === 5) {
@@ -50,7 +50,7 @@ module.exports.run = async (bot, message, args) => {
       let dncembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is dancing!`, dncicon)
-      .setImage (`https://media.giphy.com/media/1jgLDGD1Bn27e/giphy.gif`);
+      .setImage (`https://blusparkstudio.com/discord/dance_6.gif`);
       return message.channel.send(dncembed);
     }
     if(result === 6) {
@@ -58,7 +58,7 @@ module.exports.run = async (bot, message, args) => {
       let dncembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is dancing!`, dncicon)
-      .setImage (`https://media1.tenor.com/images/766599022416cc0b7b7b1bd2040eb2db/tenor.gif?itemid=12039886`);
+      .setImage (`https://blusparkstudio.com/discord/dance_7.gif`);
       return message.channel.send(dncembed);
     }
     if(result === 7) {
@@ -66,15 +66,47 @@ module.exports.run = async (bot, message, args) => {
       let dncembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is dancing!`, dncicon)
-      .setImage (`https://tenor.com/view/anime-dance-cute-girl-gif-11983564`);
+      .setImage (`https://blusparkstudio.com/discord/dance_8.gif`);
       return message.channel.send(dncembed);
     }
     if(result === 8) {
       let dncicon = message.author.displayAvatarURL;
       let dncembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} is quite a cute dancer!`, dncicon)
+      .setImage (`https://blusparkstudio.com/discord/dance_9.gif`);
+      return message.channel.send(dncembed);
+    }
+    if(result === 9) {
+      let dncicon = message.author.displayAvatarURL;
+      let dncembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} is quite a cute dancer!`, dncicon)
+      .setImage (`https://blusparkstudio.com/discord/dance_10.gif`);
+      return message.channel.send(dncembed);
+    }
+    if(result === 10) {
+      let dncicon = message.author.displayAvatarURL;
+      let dncembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is dancing!`, dncicon)
-      .setImage (`https://media1.tenor.com/images/0884bb89a026d49791aa404008843108/tenor.gif?itemid=12793536`);
+      .setImage (`https://blusparkstudio.com/discord/dance_11.gif`);
+      return message.channel.send(dncembed);
+    }
+    if(result === 11) {
+      let dncicon = message.author.displayAvatarURL;
+      let dncembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} is dancing!`, dncicon)
+      .setImage (`https://blusparkstudio.com/discord/dance_12.gif`);
+      return message.channel.send(dncembed);
+    }
+    if(result === 12) {
+      let dncicon = message.author.displayAvatarURL;
+      let dncembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} is dancing!`, dncicon)
+      .setImage (`https://blusparkstudio.com/discord/dance_13.gif`);
       return message.channel.send(dncembed);
     }
   }
@@ -91,7 +123,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Dance 💃", dncicon)
     .setDescription(`***${message.author.username} is dancing with ${rUser.user.username}.***\nGreat moves! 👏`)
-    .setImage (`https://media.giphy.com/media/3JZ6Y8LxAr1Cn6Hutt/giphy.gif`);
+    .setImage (`https://blusparkstudio.com/discord/dance_14.gif`);
     return message.channel.send(dncembed);
   }
   if(result === 1) {
@@ -100,7 +132,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Dance 💃", dncicon)
     .setDescription(`***${message.author.username} is caramell dancing with ${rUser.user.username}.***\nGreat moves! 👏`)
-    .setImage (`https://media.giphy.com/media/euMGM3uD3NHva/giphy.gif`);
+    .setImage (`https://blusparkstudio.com/discord/dance_15.gif`);
     return message.channel.send(dncembed);
   }
   if(result === 2) {
@@ -109,7 +141,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Dance 💃", dncicon)
     .setDescription(`***${message.author.username} is caramell dancing with ${rUser.user.username}.***\nGreat moves! 👏`)
-    .setImage (`https://media.giphy.com/media/4MdNUZqf4ez28/giphy.gif`);
+    .setImage (`https://blusparkstudio.com/discord/dance_16.gif`);
     return message.channel.send(dncembed);
   }
   if(result === 3) {
@@ -118,7 +150,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Dance 💃", dncicon)
     .setDescription(`***${message.author.username} is dancing with ${rUser.user.username}.***\nGreat moves! 👏`)
-    .setImage (`https://media.giphy.com/media/PYOrLJ8no4Mhy/giphy.gif`);
+    .setImage (`https://blusparkstudio.com/discord/dance_17.gif`);
     return message.channel.send(dncembed);
   }
   if(result === 4) {
@@ -127,7 +159,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Dance 💃", dncicon)
     .setDescription(`***${message.author.username} is dancing with ${rUser.user.username}.***\nGreat moves! 👏`)
-    .setImage (`https://media.giphy.com/media/10GINnQzE6bTqg/giphy.gif`);
+    .setImage (`https://blusparkstudio.com/discord/dance_18.gif`);
     return message.channel.send(dncembed);
   }
   if(result === 5) {
@@ -136,7 +168,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Dance 💃", dncicon)
     .setDescription(`***${message.author.username} is dancing with ${rUser.user.username}.***\nGreat moves! 👏`)
-    .setImage (`https://media.giphy.com/media/BxOoraoIwYdG/giphy.gif`);
+    .setImage (`https://blusparkstudio.com/discord/dance_19.gif`);
     return message.channel.send(dncembed);
   }
 }

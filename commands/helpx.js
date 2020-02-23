@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Fun", "~8ball is grass green | ~flip | ~roll | ~bowl | ~penalty | ~say words go here | ~blumoji happy")
   .addField("Randomising", "~sing")
   .addField("Education", "~calc, ~calc help, ~calc *NUMBER* + *NUMBER*")
-  .addField("Admin Only", "~clear 2 | ~steal @*INSERTNAMEHERE* 100 | ~spam 2");
+  .addField("Admin Only", "~clear 2 | ~gift @*INSERTNAMEHERE* 100 | ~steal @*INSERTNAMEHERE* 100 | ~spam 2");
   return message.channel.send(helpxembed);
 }
 

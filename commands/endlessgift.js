@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     let ndlsgftembed = new Discord.RichEmbed()
     .setColor("#1fd1c8")
     .setAuthor(`${message.author.username} is passing around an endless amount of gifts.`, ndlsgficon)
-    .setImage (`https://media.giphy.com/media/26u47j5BvwjIQ73b2/giphy.gif`);
+    .setImage (`https://blusparkstudio.com/discord/endlessgift_1.gif`);
     return message.channel.send(ndlsgftembed);
   }
   let rUser = message.mentions.members.first();
@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
   .setColor("#1fd1c8")
   .setAuthor("Endless Gifts 🎁", ndlsgficon)
   .setDescription(`***${rUser.user.username} is passing endless gifts to ${message.author.username}.***\nBored yet?`)
-  .setImage (`https://media.giphy.com/media/26u47j5BvwjIQ73b2/giphy.gif`);
+  .setImage (`https://blusparkstudio.com/discord/endlessgift_1.gif`);
   return message.channel.send(ndlsgftembed);
 }
 

@@ -5,8 +5,17 @@ module.exports.run = async (bot, message, args) => {
   if(!rUser) return message.channel.send(`User not found! 😕`);
   if(rUser.id === message.author.id) return message.channel.send(`***Aw. Do you need a hug, ${message.author.username}?***`);
 
-  let replies = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"];
-  let result = Math.floor((Math.random() * replies.length));
+  let result = "0";
+  let repliesCHOICE = ["0", "1"];
+  let resultCHOICE = Math.floor((Math.random() * repliesCHOICE.length));
+  if(resultCHOICE === 0) {
+    let replies = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    result = Math.floor((Math.random() * replies.length));
+  }
+  if(resultCHOICE === 1) {
+    let replies = ["10", "11", "12", "13", "14", "15", "16", "17", "18"];
+    result = Math.floor((Math.random() * replies.length));
+  }
 
   if(result === 0) {
     let hgicon = message.author.displayAvatarURL;
@@ -14,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Hug 🤗", hgicon)
     .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
-    .setImage (`https://media.giphy.com/media/y7lqoOlWLbf8Y/giphy.gif`);
+    .setImage (`https://blusparkstudio.com/discord/hug_1.gif`);
     return message.channel.send(hgembed);
   }
   if(result === 1) {
@@ -23,7 +32,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Hug 🤗", hgicon)
     .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
-    .setImage (`https://i.imgur.com/wOmoeF8.gif`);
+    .setImage (`https://blusparkstudio.com/discord/hug_2.gif`);
     return message.channel.send(hgembed);
   }
   if(result === 2) {
@@ -32,7 +41,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Hug 🤗", hgicon)
     .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
-    .setImage (`https://i.imgur.com/r9aU2xv.gif`);
+    .setImage (`https://blusparkstudio.com/discord/hug_3.gif`);
     return message.channel.send(hgembed);
   }
   if(result === 3) {
@@ -41,7 +50,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Hug 🤗", hgicon)
     .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
-    .setImage (`https://i.imgur.com/ntqYLGl.gif`);
+    .setImage (`https://blusparkstudio.com/discord/hug_4.gif`);
     return message.channel.send(hgembed);
   }
   if(result === 4) {
@@ -50,7 +59,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Hug 🤗", hgicon)
     .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
-    .setImage (`https://i.imgur.com/4oLIrwj.gif`);
+    .setImage (`https://blusparkstudio.com/discord/hug_5.gif`);
     return message.channel.send(hgembed);
   }
   if(result === 5) {
@@ -59,7 +68,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Hug 🤗", hgicon)
     .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
-    .setImage (`https://i.imgur.com/6qYOUQF.gif`);
+    .setImage (`https://blusparkstudio.com/discord/hug_6.gif`);
     return message.channel.send(hgembed);
   }
   if(result === 6) {
@@ -68,7 +77,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Hug 🤗", hgicon)
     .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
-    .setImage (`https://media1.tenor.com/images/0aced4890b86b4f78206dd7fa16dc198/tenor.gif?itemid=5404693`);
+    .setImage (`https://blusparkstudio.com/discord/hug_7.gif`);
     return message.channel.send(hgembed);
   }
   if(result === 7) {
@@ -77,7 +86,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Hug 🤗", hgicon)
     .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
-    .setImage (`https://media1.tenor.com/images/3d62384321435408f50823ae6f5ca033/tenor.gif?itemid=12270770`);
+    .setImage (`https://blusparkstudio.com/discord/hug_8.gif`);
     return message.channel.send(hgembed);
   }
   if(result === 8) {
@@ -86,7 +95,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Hug 🤗", hgicon)
     .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
-    .setImage (`https://media1.tenor.com/images/4d89d7f963b41a416ec8a55230dab31b/tenor.gif?itemid=5166500`);
+    .setImage (`https://blusparkstudio.com/discord/hug_9.gif`);
     return message.channel.send(hgembed);
   }
   if(result === 9) {
@@ -95,7 +104,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Hug 🤗", hgicon)
     .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
-    .setImage (`https://media1.tenor.com/images/f77657e4f9d454de399b7c8acb1b8735/tenor.gif?itemid=7939501`);
+    .setImage (`https://blusparkstudio.com/discord/hug_10.gif`);
     return message.channel.send(hgembed);
   }
   if(result === 10) {
@@ -104,7 +113,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Hug 🤗", hgicon)
     .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
-    .setImage (`https://media1.tenor.com/images/24ac13447f9409d41c1aecb923aedf81/tenor.gif?itemid=5026057`);
+    .setImage (`https://blusparkstudio.com/discord/hug_11.gif`);
     return message.channel.send(hgembed);
   }
   if(result === 11) {
@@ -113,7 +122,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Hug 🤗", hgicon)
     .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
-    .setImage (`https://media1.tenor.com/images/6beb6a29603bb0769408c8ff32e035ab/tenor.gif?itemid=5525930`);
+    .setImage (`https://blusparkstudio.com/discord/hug_12.gif`);
     return message.channel.send(hgembed);
   }
   if(result === 12) {
@@ -122,7 +131,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Hug 🤗", hgicon)
     .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
-    .setImage (`https://media1.tenor.com/images/e58eb2794ff1a12315665c28d5bc3f5e/tenor.gif?itemid=10195705`);
+    .setImage (`https://blusparkstudio.com/discord/hug_13.gif`);
     return message.channel.send(hgembed);
   }
   if(result === 13) {
@@ -131,7 +140,52 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Hug 🤗", hgicon)
     .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
-    .setImage (`https://media1.tenor.com/images/6d73b0a9cadef5310be4b6160d2f959a/tenor.gif?itemid=12099823`);
+    .setImage (`https://blusparkstudio.com/discord/hug_14.gif`);
+    return message.channel.send(hgembed);
+  }
+  if(result === 14) {
+    let hgicon = message.author.displayAvatarURL;
+    let hgembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Hug 🤗", hgicon)
+    .setDescription(`***${message.author.username} would like a warm hug from ${rUser.user.username}.***\nAww. ☺️`)
+    .setImage (`https://blusparkstudio.com/discord/hug_15.gif`);
+    return message.channel.send(hgembed);
+  }
+  if(result === 15) {
+    let hgicon = message.author.displayAvatarURL;
+    let hgembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Hug 🤗", hgicon)
+    .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
+    .setImage (`https://blusparkstudio.com/discord/hug_16.gif`);
+    return message.channel.send(hgembed);
+  }
+  if(result === 16) {
+    let hgicon = message.author.displayAvatarURL;
+    let hgembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Hug 🤗", hgicon)
+    .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
+    .setImage (`https://blusparkstudio.com/discord/hug_17.gif`);
+    return message.channel.send(hgembed);
+  }
+  if(result === 17) {
+    let hgicon = message.author.displayAvatarURL;
+    let hgembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Hug 🤗", hgicon)
+    .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
+    .setImage (`https://blusparkstudio.com/discord/hug_18.gif`);
+    return message.channel.send(hgembed);
+  }
+  if(result === 18) {
+    let hgicon = message.author.displayAvatarURL;
+    let hgembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Hug 🤗", hgicon)
+    .setDescription(`***${message.author.username} hugged ${rUser.user.username}.***\nAww. ☺️`)
+    .setImage (`https://blusparkstudio.com/discord/hug_19.gif`);
     return message.channel.send(hgembed);
   }
 }

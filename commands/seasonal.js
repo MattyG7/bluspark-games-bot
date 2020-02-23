@@ -5,6 +5,8 @@ module.exports.run = async (bot, message, args) => {
     let ssnlembed = new Discord.RichEmbed()
     .setColor("#1fd1c8")
     .setTitle(`📅 **Seasonal Greetings**`)
+    .addField("Valentine's Day", "`~happy valentines day, ~happy valentines`")
+    .addField("Easter", "`~happy easter`")
     .addField("Halloween", "`~happy halloween`")
     .addField("Christmas", "`~merry christmas`")
     .addField("Birthday", "`~happy birthday`");

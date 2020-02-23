@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
   if (!args[0]) {
-    let replies = ["0", "1", "2", "3", "4", "5"];
+    let replies = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
     let result = Math.floor((Math.random() * replies.length));
 
     if(result === 0) {
@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
       let brdembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is bored.`, brdicon)
-      .setImage (`https://media.tenor.com/images/fe42bcedb6118731aaf056e493556d3f/tenor.gif`);
+      .setImage (`https://blusparkstudio.com/discord/bored_1.gif`);
       return message.channel.send(brdembed);
     }
     if(result === 1) {
@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
       let brdembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is bored.`, brdicon)
-      .setImage (`https://media.tenor.com/images/17041af42b27ba6a8e27d9377fb5f874/tenor.gif`);
+      .setImage (`https://blusparkstudio.com/discord/bored_2.gif`);
       return message.channel.send(brdembed);
     }
     if(result === 2) {
@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
       let brdembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is bored.`, brdicon)
-      .setImage (`https://media1.tenor.com/images/9874a8b8dfaa4131dadce066842fc006/tenor.gif?itemid=8053555`);
+      .setImage (`https://blusparkstudio.com/discord/bored_3.gif`);
       return message.channel.send(brdembed);
     }
     if(result === 3) {
@@ -34,7 +34,7 @@ module.exports.run = async (bot, message, args) => {
       let brdembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is bored.`, brdicon)
-      .setImage (`https://66.media.tumblr.com/c501c83f8b23b56d0c8ed817bf28313e/tumblr_ob0xuy30P51ufdoz0o1_500.gif`);
+      .setImage (`https://blusparkstudio.com/discord/bored_4.gif`);
       return message.channel.send(brdembed);
     }
     if(result === 4) {
@@ -42,7 +42,7 @@ module.exports.run = async (bot, message, args) => {
       let brdembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is bored.`, brdicon)
-      .setImage (`https://66.media.tumblr.com/fdd80d8a03b7c618504dbf58ac283a64/tumblr_p7dc5qzkVF1wft4qpo1_500.gif`);
+      .setImage (`https://blusparkstudio.com/discord/bored_5.gif`);
       return message.channel.send(brdembed);
     }
     if(result === 5) {
@@ -50,7 +50,39 @@ module.exports.run = async (bot, message, args) => {
       let brdembed = new Discord.RichEmbed()
       .setColor("#1fd1c8")
       .setAuthor(`${message.author.username} is bored.`, brdicon)
-      .setImage (`https://nerdultlife.files.wordpress.com/2015/06/anigif_optimized-9448-1422918502-1.gif?w=408`);
+      .setImage (`https://blusparkstudio.com/discord/bored_6.gif`);
+      return message.channel.send(brdembed);
+    }
+    if(result === 6) {
+      let brdicon = message.author.displayAvatarURL;
+      let brdembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} is bored.`, brdicon)
+      .setImage (`https://blusparkstudio.com/discord/bored_7.gif`);
+      return message.channel.send(brdembed);
+    }
+    if(result === 7) {
+      let brdicon = message.author.displayAvatarURL;
+      let brdembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} is bored.`, brdicon)
+      .setImage (`https://blusparkstudio.com/discord/bored_8.gif`);
+      return message.channel.send(brdembed);
+    }
+    if(result === 8) {
+      let brdicon = message.author.displayAvatarURL;
+      let brdembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} is bored.`, brdicon)
+      .setImage (`https://blusparkstudio.com/discord/bored_9.gif`);
+      return message.channel.send(brdembed);
+    }
+    if(result === 9) {
+      let brdicon = message.author.displayAvatarURL;
+      let brdembed = new Discord.RichEmbed()
+      .setColor("#1fd1c8")
+      .setAuthor(`${message.author.username} is bored and wants to be amused.`, brdicon)
+      .setImage (`https://blusparkstudio.com/discord/bored_10.gif`);
       return message.channel.send(brdembed);
     }
   }
@@ -58,7 +90,7 @@ module.exports.run = async (bot, message, args) => {
   if(!rUser) return message.channel.send(`User not found! 😕`);
   if(rUser.id === message.author.id) return message.channel.send(`***${message.author.username} is bored. Someone, talk. 💬***`);
 
-  let replies = ["0", "1", "2", "3", "4", "5"];
+  let replies = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   let result = Math.floor((Math.random() * replies.length));
 
   if(result === 0) {
@@ -67,7 +99,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Bored 😴", brdicon)
     .setDescription(`***${rUser.user.username} is boring ${message.author.username}.***\n💤`)
-    .setImage (`https://media.tenor.com/images/fe42bcedb6118731aaf056e493556d3f/tenor.gif`);
+    .setImage (`https://blusparkstudio.com/discord/bored_1.gif`);
     return message.channel.send(brdembed);
   }
   if(result === 1) {
@@ -76,7 +108,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Bored 😴", brdicon)
     .setDescription(`***${rUser.user.username} is boring ${message.author.username}.***\n💤`)
-    .setImage (`https://media.tenor.com/images/17041af42b27ba6a8e27d9377fb5f874/tenor.gif`);
+    .setImage (`https://blusparkstudio.com/discord/bored_2.gif`);
     return message.channel.send(brdembed);
   }
   if(result === 2) {
@@ -85,7 +117,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Bored 😴", brdicon)
     .setDescription(`***${rUser.user.username} is boring ${message.author.username}.***\n💤`)
-    .setImage (`https://media1.tenor.com/images/9874a8b8dfaa4131dadce066842fc006/tenor.gif?itemid=8053555`);
+    .setImage (`https://blusparkstudio.com/discord/bored_3.gif`);
     return message.channel.send(brdembed);
   }
   if(result === 3) {
@@ -94,7 +126,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Bored 😴", brdicon)
     .setDescription(`***${rUser.user.username} is boring ${message.author.username}.***\n💤`)
-    .setImage (`https://66.media.tumblr.com/c501c83f8b23b56d0c8ed817bf28313e/tumblr_ob0xuy30P51ufdoz0o1_500.gif`);
+    .setImage (`https://blusparkstudio.com/discord/bored_4.gif`);
     return message.channel.send(brdembed);
   }
   if(result === 4) {
@@ -103,7 +135,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Bored 😴", brdicon)
     .setDescription(`***${rUser.user.username} is boring ${message.author.username}.***\n💤`)
-    .setImage (`https://66.media.tumblr.com/fdd80d8a03b7c618504dbf58ac283a64/tumblr_p7dc5qzkVF1wft4qpo1_500.gif`);
+    .setImage (`https://blusparkstudio.com/discord/bored_5.gif`);
     return message.channel.send(brdembed);
   }
   if(result === 5) {
@@ -112,7 +144,43 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Bored 😴", brdicon)
     .setDescription(`***${rUser.user.username} is boring ${message.author.username}.***\n💤`)
-    .setImage (`https://nerdultlife.files.wordpress.com/2015/06/anigif_optimized-9448-1422918502-1.gif?w=408`);
+    .setImage (`https://blusparkstudio.com/discord/bored_6.gif`);
+    return message.channel.send(brdembed);
+  }
+  if(result === 6) {
+    let brdicon = message.author.displayAvatarURL;
+    let brdembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Bored 😴", brdicon)
+    .setDescription(`***${rUser.user.username} is boring ${message.author.username}.***\n💤`)
+    .setImage (`https://blusparkstudio.com/discord/bored_7.gif`);
+    return message.channel.send(brdembed);
+  }
+  if(result === 7) {
+    let brdicon = message.author.displayAvatarURL;
+    let brdembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Bored 😴", brdicon)
+    .setDescription(`***${rUser.user.username} is boring ${message.author.username}.***\n💤`)
+    .setImage (`https://blusparkstudio.com/discord/bored_8.gif`);
+    return message.channel.send(brdembed);
+  }
+  if(result === 8) {
+    let brdicon = message.author.displayAvatarURL;
+    let brdembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Bored 😴", brdicon)
+    .setDescription(`***${rUser.user.username} is boring ${message.author.username}.***\n💤`)
+    .setImage (`https://blusparkstudio.com/discord/bored_9.gif`);
+    return message.channel.send(brdembed);
+  }
+  if(result === 9) {
+    let brdicon = message.author.displayAvatarURL;
+    let brdembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Bored 😴", brdicon)
+    .setDescription(`***${message.author.username} wants ${rUser.user.username} to amuse them.***\n💤`)
+    .setImage (`https://blusparkstudio.com/discord/bored_10.gif`);
     return message.channel.send(brdembed);
   }
 }

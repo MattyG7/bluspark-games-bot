@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   if(!rUser) return message.channel.send(`User not found! 😕`);
   if(rUser.id === message.author.id) return message.channel.send(`***That's kinda weird, ${message.author.username}...***`);
 
-  let replies = ["0", "1", "2", "3"];
+  let replies = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   let result = Math.floor((Math.random() * replies.length));
 
   if(result === 0) {
@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Pat ✋", pticon)
     .setDescription(`***${message.author.username} patted ${rUser.user.username}.***\n😊`)
-    .setImage (`https://media.giphy.com/media/M3a51DMeWvYUo/giphy.gif`);
+    .setImage (`https://blusparkstudio.com/discord/pat_1.gif`);
     return message.channel.send(ptembed);
   }
   if(result === 1) {
@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Pat ✋", pticon)
     .setDescription(`***${message.author.username} patted ${rUser.user.username}.***\n😊`)
-    .setImage (`https://pa1.narvii.com/5772/a9060d949ffd6b329f947679f9503a6008fb6c6e_hq.gif`);
+    .setImage (`https://blusparkstudio.com/discord/pat_2.gif`);
     return message.channel.send(ptembed);
   }
   if(result === 2) {
@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Pat ✋", pticon)
     .setDescription(`***${message.author.username} patted ${rUser.user.username}.***\n😊`)
-    .setImage (`https://media1.tenor.com/images/398c9c832335a13be124914c23e88fdf/tenor.gif`);
+    .setImage (`https://blusparkstudio.com/discord/pat_3.gif`);
     return message.channel.send(ptembed);
   }
   if(result === 3) {
@@ -41,7 +41,61 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1fd1c8")
     .setAuthor("Pat ✋", pticon)
     .setDescription(`***${message.author.username} patted ${rUser.user.username}.***\n😊`)
-    .setImage (`https://media.tenor.com/images/cb30351bd9094d05fac1b9f0933e4b44/tenor.gif`);
+    .setImage (`https://blusparkstudio.com/discord/pat_4.gif`);
+    return message.channel.send(ptembed);
+  }
+  if(result === 4) {
+    let pticon = message.author.displayAvatarURL;
+    let ptembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Pat ✋", pticon)
+    .setDescription(`***${message.author.username} patted ${rUser.user.username}.***\nCheer up buddy 🙁`)
+    .setImage (`https://blusparkstudio.com/discord/pat_5.gif`);
+    return message.channel.send(ptembed);
+  }
+  if(result === 5) {
+    let pticon = message.author.displayAvatarURL;
+    let ptembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Pat ✋", pticon)
+    .setDescription(`***${message.author.username} patted ${rUser.user.username}.***\n😊`)
+    .setImage (`https://blusparkstudio.com/discord/pat_6.gif`);
+    return message.channel.send(ptembed);
+  }
+  if(result === 6) {
+    let pticon = message.author.displayAvatarURL;
+    let ptembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Pat ✋", pticon)
+    .setDescription(`***${message.author.username} patted ${rUser.user.username}.***\n😊`)
+    .setImage (`https://blusparkstudio.com/discord/pat_7.gif`);
+    return message.channel.send(ptembed);
+  }
+  if(result === 7) {
+    let pticon = message.author.displayAvatarURL;
+    let ptembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Pat ✋", pticon)
+    .setDescription(`***Postman Pat.***\nProbably not what you were expecting 😂`)
+    .setImage (`https://blusparkstudio.com/discord/pat_8.gif`);
+    return message.channel.send(ptembed);
+  }
+  if(result === 8) {
+    let pticon = message.author.displayAvatarURL;
+    let ptembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Pat ✋", pticon)
+    .setDescription(`***${message.author.username} patted ${rUser.user.username}.***\n😊`)
+    .setImage (`https://blusparkstudio.com/discord/pat_9.gif`);
+    return message.channel.send(ptembed);
+  }
+  if(result === 9) {
+    let pticon = message.author.displayAvatarURL;
+    let ptembed = new Discord.RichEmbed()
+    .setColor("#1fd1c8")
+    .setAuthor("Pat ✋", pticon)
+    .setDescription(`***${message.author.username} patted ${rUser.user.username}.***\n😊`)
+    .setImage (`https://blusparkstudio.com/discord/pat_10.gif`);
     return message.channel.send(ptembed);
   }
 }
