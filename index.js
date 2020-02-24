@@ -66,12 +66,13 @@ bot.on("message", async message => {
   else {
     if (message.channel.name === "rules-and-info") {
       if (message.content.toLowerCase() === "i agree") {
-        message.delete()
+        message.delete();
         console.log(`The new user has agreed to the server's rules and info.`);
         message.member.addRole('New Spark');
         message.author.send("⚡ Welcome to Bluspark Studio's Discord server! I hope you'll find this an enjoyable server to be a member of.\n\n- Master Bluspark");
       }
       else {
+        message.delete();
         message.channel.send(`Please type **i agree**.`).then(sentMessage => { sentMessage.delete(2000); });
       }
     }
