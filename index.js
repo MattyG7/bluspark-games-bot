@@ -19,25 +19,8 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 
-client.on("guildMemberAdd", member => {
+client.on('guildMemberAdd', member => {
   console.log(`Someone new has joined the server`);
-});
-
-client.on("message", message => {
-  if (message.channel.name === "rules-and-info") {
-    if (message.content.toLowerCase() === "i agree") {
-      message.delete()
-      console.log(`The new user has agreed to the server's rules and info.`);
-      message.member.addRole('New Spark');
-      message.author.send("⚡ Welcome to Bluspark Studio's Discord server! I hope you'll find this an enjoyable server to be a member of.\n\n- Master Bluspark");
-    }
-    else {
-      message.channel.send("Please type **i agree**.");
-      setTimeout(() => {
-        message.delete()
-      }, 2000);
-    }
-  }
 });
 
 bot.on("ready", async () => {
@@ -81,6 +64,17 @@ bot.on("message", async message => {
     if (commandfile) commandfile.run(bot, message, args, author, messageArray);
   }
   else {
+    if (message.channel.name === "rules-and-info") {
+      if (message.content.toLowerCase() === "i agree") {
+        message.delete()
+        console.log(`The new user has agreed to the server's rules and info.`);
+        message.member.addRole('New Spark');
+        message.author.send("⚡ Welcome to Bluspark Studio's Discord server! I hope you'll find this an enjoyable server to be a member of.\n\n- Master Bluspark");
+      }
+      else {
+        message.channel.send(`Please type **i agree**.`).then(sentMessage => { sentMessage.delete(2000); });
+      }
+    }
     if (message.content === "Thanks blu" || message.content === "Thank you blu" || message.content === "Thanks bot" || message.content === "Thank you bot") {
       return message.channel.send(`You're welcome.`);
     }
