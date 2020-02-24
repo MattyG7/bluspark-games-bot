@@ -19,7 +19,7 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 
-client.on('guildMemberAdd', member => {
+bot.on("guildMemberAdd", member => {
   console.log(`Someone new has joined the server`);
 });
 
