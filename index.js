@@ -1,5 +1,16 @@
 const Discord = require("discord.js");
 const fs = require("fs");
+const mongoose = require(`mongoose`);
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true
+}, function(error) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("Connected to mLab database!");
+  }
+});
+
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
