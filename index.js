@@ -40,21 +40,9 @@ bot.on("ready", async () => {
 });
 
 
-//bot.on("guildMemberAdd", async member => {
-//  console.log(`${member.id} joined the server.`);
-//  let welcomechannel = member.guild.channels.find(`name`, "welcome");
-//  welcomechannel.send(`${member} is back again :/`);
-//});
-//
-//bot.on("guildMemberRemove", async member => {
-//  console.log(`${member.id} left the server.`);
-//  let welcomechannel = member.guild.channels.find(`name`, "welcome");
-//  welcomechannel.send(`${member} is back again :/`);
-//});
-
 bot.on("message", async message => {
   if (message.author.bot) return;
-  if (message.channel.type === "dm") return;
+  if (message.author.bot) return;
 
   let prefix = "~";
   let author = "MasterBluspark#0119";
