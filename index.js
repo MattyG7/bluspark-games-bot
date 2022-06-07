@@ -10,8 +10,6 @@ mongoose.connect(process.env.MONGODB_URI, {
     console.log("Connected to database!");
   }
 });
-//https://www.youtube.com/watch?v=be1e5vmZCj4&t=232s
-//https://github.com/KaiWhen/bot2/blob/master/index.js
 
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
@@ -67,7 +65,6 @@ bot.on("ready", async () => {
 
 bot.on("message", async message => {
   if (message.author.bot) return;
-  if (message.author.bot) return;
 
   let prefix = "~";
   let author = "MasterBluspark#0119";
@@ -83,6 +80,73 @@ bot.on("message", async message => {
   //let xpforlvl = 10;
   //-----------------
 
+  //WORD COUNT FOR XP
+  let wordCount = 1;
+  args.forEach(element => {
+    wordCount++;
+  });
+  console.log(`Word count for ${message.author.username}: ${wordCount}`);
+  //console.log(`+ ${wordCount} exp`);
+  console.log(`+ ${wordCount}xp`);
+  await mongoose.model("DiscordUserData").findOne ({
+    userID: `${message.author.id}`
+  }, function(error, data) {
+    if (error) {
+      console.log("Failed to get data :(");
+      console.log(error);
+    } else {
+      let userColour = data.col;
+      let userCurrentXP = data.currentxp;
+      let userGoalXP = data.targetxp;
+      let OverflowXP = 0;
+      let userNowXP = userCurrentXP + wordCount;
+      let userLevel = data.level;
+      console.log(`${userCurrentXP}xp + ${wordCount}xp = ${userNowXP}xp`);
+      if (userNowXP === userGoalXP || userNowXP > userGoalXP) {
+        OverflowXP = userNowXP - userGoalXP;
+        let userLevelNEW = userLevel + 1;
+        let userIcon = message.author.displayAvatarURL;
+        let lvlupembed = new Discord.RichEmbed()
+        .setColor(`#${userColour}`)
+        .setThumbnail(`${userIcon}`)
+        .setTitle(`✨ Level Up!`)
+        .setDescription(`You reached level ${userLevelNEW}!`);
+        message.channel.send(lvlupembed);
+        console.log(`Level Up! User grew from level ${userLevel} to ${userLevelNEW}.`);
+        console.log(`Overflow XP is ${OverflowXP} and was added to user's current level XP count.`);
+        let userGoalXPNEW_UNROUNDED = userGoalXP * 1.2;
+        let userGoalXPNEW = Math.round(userGoalXPNEW_UNROUNDED);
+        console.log(`XP needed to next level has gone up from ${userGoalXP} to ${userGoalXPNEW}.`);
+        mongoose.model("DiscordUserData").updateOne ({userID: `${message.author.id}`}, {
+          currentxp: `${OverflowXP}`,
+          targetxp: `${userGoalXPNEW}`,
+          level: `${userLevelNEW}`
+        }, function(error, data) {
+          if (error) {
+            console.log("Failed to save the data :(");
+            console.log(error);
+          } else {
+            console.log(`Successfully set overflow XP as current XP, increased target XP by 1.2 and added 1 to the level!`);
+            console.log(`- BEFORE: ${userCurrentXP}/${userGoalXP}. AFTER: ${OverflowXP}/${userGoalXPNEW}`);
+            console.log(`- BEFORE: ${userLevel}. AFTER: ${userLevelNEW}`);
+          }
+        });
+      } else {
+        mongoose.model("DiscordUserData").updateOne ({userID: `${message.author.id}`}, {
+          currentxp: `${userNowXP}`
+        }, function(error, data) {
+          if (error) {
+            console.log("Failed to save the data :(");
+            console.log(error);
+          } else {
+            console.log(`Successfully added new XP to current XP!`);
+            console.log(`- BEFORE: ${userCurrentXP}. AFTER: ${userNowXP}`);
+          }
+        });
+      }
+    }
+  });
+
   if (message.content.startsWith(prefix)) {
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     if (commandfile) commandfile.run(bot, message, args, author, messageArray);
@@ -90,11 +154,39 @@ bot.on("message", async message => {
   else {
     if (message.channel.name === "rules-and-info") {
       if (message.content.toLowerCase() === "i agree") {
+        let MsgAuthorID = `${message.author.id}`;
         message.delete();
         console.log(`The new user has agreed to the server's rules and info.`);
         message.member.addRole('679460991150587936');
         message.member.removeRole ('681232507492106281');
         message.author.send(`⚡ Welcome to Bluspark Studio's Discord server! I hope you'll find this an enjoyable server to be a member of.\n\n- Master Bluspark`);
+        DiscordUserData.create ({
+          userID: MsgAuthorID,
+          sparkcoins: 0,
+          currentxp: 0,
+          targetxp: 100,
+          level: 1,
+          dailydate: "no-date",
+          dailystreak: 0,
+          col: "not-set",
+          web: "not-set",
+          yt: "not-set",
+          tw: "not-set",
+          lo: "not-set",
+          lastbowled: "no-date",
+          lastplayeddeal: "no-date",
+          lastplayedmemory: "no-date",
+          lastkicked: "no-date",
+          lastrolled: "no-date"
+        }, function(error, data) {
+          if (error) {
+            console.log("ALERT! User couldn't be added to database!");
+            console.log(error);
+          } else {
+            console.log("SUCCESS! User added to database!");
+            console.log(data);
+          }
+        });
         //======================================================
         let result = "0";
         let welcome = `:arrow_forward:  Welcome.`;
@@ -179,14 +271,28 @@ bot.on("message", async message => {
         message.channel.send(`Please type **i agree**.`).then(sentMessage => { sentMessage.delete(2000); });
       }
     }
+
     if (message.content === "Thanks blu" || message.content === "Thank you blu" || message.content === "Thanks bot" || message.content === "Thank you bot") {
       return message.channel.send(`You're welcome.`);
     }
     if (message.content === "Not you" || message.content === "No not you") {
       return message.channel.send(`Oh, sorry! 😅`);
     }
+    //let lastDigitOfNumber = message.content.slice(-1);
+    //let lastDigitOfNumberNUMBER = parseInt(lastDigitOfNumber);
+    //if (lastDigitOfNumberNUMBER === 0 || lastDigitOfNumberNUMBER === 5) {
+      //return message.channel.send(`Yes`);
+    //} else {
+      //return message.channel.send(`No`);
+    //}
+    //if (args[0] === "abc") {
+      //let num = parseInt(args[1]);
+      //let lastDigitOfNumberNUMBER = num % 10;
+      //return message.channel.send(lastDigitOfNumberNUMBER);
+    //}
     return;
   }
 
 });
 bot.login(process.env.token);
+
