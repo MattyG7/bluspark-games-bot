@@ -34,8 +34,8 @@ const discordUserDataSchema = mongoose.Schema ({
   lastkicked: String,
   lastrolled: String
 }, {collection: "DiscordUserData"});
-var DiscordUserData = mongoose.model("DiscordUserData", discordUserDataSchema);
-//module.exports = mongoose.model("DiscordUserData", discordUserDataSchema);
+//var DiscordUserData = mongoose.model("DiscordUserData", discordUserDataSchema);
+module.exports = mongoose.model("DiscordUserData", discordUserDataSchema);
 
 fs.readdir("./commands/", (err, files) => {
   if (err) console.log(err);
