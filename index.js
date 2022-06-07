@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-const mongoose = require(`mongoose`);
+const mongoose = require("mongoose");
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true
 }, function(error) {
@@ -33,9 +33,9 @@ const discordUserDataSchema = mongoose.Schema ({
   lastplayedmemory: String,
   lastkicked: String,
   lastrolled: String
-}, {collection: 'DiscordUserData'});
-//var DiscordUserData = mongoose.model("DiscordUserData", discordUserDataSchema);
-module.exports = mongoose.model("DiscordUserData", discordUserDataSchema);
+}, {collection: "DiscordUserData"});
+var DiscordUserData = mongoose.model("DiscordUserData", discordUserDataSchema);
+//module.exports = mongoose.model("DiscordUserData", discordUserDataSchema);
 
 fs.readdir("./commands/", (err, files) => {
   if (err) console.log(err);
