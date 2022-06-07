@@ -1,7 +1,7 @@
 {
   "name": "bluspark-games",
   "version": "1.0.0",
-  "description": "A bunch of fun and entertaining commands/ games for your Discord server.",
+  "description": "A bunch of fun minigames and commands. Command is ~ (example: ~help).",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
