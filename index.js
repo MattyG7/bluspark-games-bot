@@ -1,4 +1,4 @@
-﻿const Discord = require("discord.js");
+const Discord = require("discord.js");
 const fs = require("fs");
 const mongoose = require(`mongoose`);
 mongoose.connect(process.env.MONGODB_URI, {
@@ -36,7 +36,7 @@ var discordUserDataSchema = new mongoose.Schema ({
   lastkicked: String,
   lastrolled: String
 });
-var DiscordUserData = mongoose.model("DiscordUserData", discordUserDataSchema);
+module.exports = mongoose.model("DiscordUserData", discordUserDataSchema);
 
 fs.readdir("./commands/", (err, files) => {
   if (err) console.log(err);
