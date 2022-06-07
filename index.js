@@ -17,7 +17,7 @@ const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
 
-var discordUserDataSchema = new mongoose.Schema ({
+const discordUserDataSchema = mongoose.Schema ({
   userID: String,
   sparkcoins: Number,
   currentxp: Number,
@@ -35,7 +35,8 @@ var discordUserDataSchema = new mongoose.Schema ({
   lastplayedmemory: String,
   lastkicked: String,
   lastrolled: String
-});
+}, {collection: 'DiscordUserData'});
+//var DiscordUserData = mongoose.model("DiscordUserData", discordUserDataSchema);
 module.exports = mongoose.model("DiscordUserData", discordUserDataSchema);
 
 fs.readdir("./commands/", (err, files) => {
