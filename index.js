@@ -7,7 +7,7 @@ mongoose.connect(process.env.MONGODB_URI, {
   if (error) {
     console.log(error);
   } else {
-    console.log("Connected to mLab database!");
+    console.log("Connected to database!");
   }
 });
 //https://www.youtube.com/watch?v=be1e5vmZCj4&t=232s
