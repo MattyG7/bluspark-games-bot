@@ -80,72 +80,7 @@ bot.on("message", async message => {
   //let xpforlvl = 10;
   //-----------------
 
-  //WORD COUNT FOR XP
-  let wordCount = 1;
-  args.forEach(element => {
-    wordCount++;
-  });
-  console.log(`Word count for ${message.author.username}: ${wordCount}`);
-  //console.log(`+ ${wordCount} exp`);
-  console.log(`+ ${wordCount}xp`);
-  await mongoose.model("DiscordUserData").findOne ({
-    userID: `${message.author.id}`
-  }, function(error, data) {
-    if (error) {
-      console.log("Failed to get data :(");
-      console.log(error);
-    } else {
-      let userColour = data.col;
-      let userCurrentXP = data.currentxp;
-      let userGoalXP = data.targetxp;
-      let OverflowXP = 0;
-      let userNowXP = userCurrentXP + wordCount;
-      let userLevel = data.level;
-      console.log(`${userCurrentXP}xp + ${wordCount}xp = ${userNowXP}xp`);
-      if (userNowXP === userGoalXP || userNowXP > userGoalXP) {
-        OverflowXP = userNowXP - userGoalXP;
-        let userLevelNEW = userLevel + 1;
-        let userIcon = message.author.displayAvatarURL;
-        let lvlupembed = new Discord.RichEmbed()
-        .setColor(`#${userColour}`)
-        .setThumbnail(`${userIcon}`)
-        .setTitle(`✨ Level Up!`)
-        .setDescription(`You reached level ${userLevelNEW}!`);
-        message.channel.send(lvlupembed);
-        console.log(`Level Up! User grew from level ${userLevel} to ${userLevelNEW}.`);
-        console.log(`Overflow XP is ${OverflowXP} and was added to user's current level XP count.`);
-        let userGoalXPNEW_UNROUNDED = userGoalXP * 1.2;
-        let userGoalXPNEW = Math.round(userGoalXPNEW_UNROUNDED);
-        console.log(`XP needed to next level has gone up from ${userGoalXP} to ${userGoalXPNEW}.`);
-        mongoose.model("DiscordUserData").updateOne ({userID: `${message.author.id}`}, {
-          currentxp: `${OverflowXP}`,
-          targetxp: `${userGoalXPNEW}`,
-          level: `${userLevelNEW}`
-        }, function(error, data) {
-          if (error) {
-            console.log("Failed to save the data :(");
-            console.log(error);
-          } else {
-            console.log(`Successfully set overflow XP as current XP, increased target XP by 1.2 and added 1 to the level!`);
-            console.log(`- BEFORE: ${userCurrentXP}/${userGoalXP}. AFTER: ${OverflowXP}/${userGoalXPNEW}`);
-            console.log(`- BEFORE: ${userLevel}. AFTER: ${userLevelNEW}`);
-          }
-        });
-      } else {
-        mongoose.model("DiscordUserData").updateOne ({userID: `${message.author.id}`}, {
-          currentxp: `${userNowXP}`
-        }, function(error, data) {
-          if (error) {
-            console.log("Failed to save the data :(");
-            console.log(error);
-          } else {
-            console.log(`Successfully added new XP to current XP!`);
-            console.log(`- BEFORE: ${userCurrentXP}. AFTER: ${userNowXP}`);
-          }
-        });
-      }
-    }
-  });
+  
 
   if (message.content.startsWith(prefix)) {
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
