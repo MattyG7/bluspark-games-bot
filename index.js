@@ -10,9 +10,33 @@ mongoose.connect(process.env.MONGODB_URI, {
     console.log("Connected to mLab database!");
   }
 });
+//https://www.youtube.com/watch?v=be1e5vmZCj4&t=232s
+//https://github.com/KaiWhen/bot2/blob/master/index.js
 
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
+
+
+var discordUserDataSchema = new mongoose.Schema ({
+  userID: String,
+  sparkcoins: Number,
+  currentxp: Number,
+  targetxp: Number,
+  level: Number,
+  dailydate: String,
+  dailystreak: Number,
+  col: String,
+  web: String,
+  yt: String,
+  tw: String,
+  lo: String,
+  lastbowled: String,
+  lastplayeddeal: String,
+  lastplayedmemory: String,
+  lastkicked: String,
+  lastrolled: String
+});
+var DiscordUserData = mongoose.model("DiscordUserData", discordUserDataSchema);
 
 fs.readdir("./commands/", (err, files) => {
   if (err) console.log(err);
